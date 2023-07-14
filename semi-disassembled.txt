@@ -1,0 +1,2178 @@
+# Python bytecode version base 3.8.0 (3413)
+# Decompiled from: Python 3.8.10 (tags/v3.8.10:3d8993a, May  3 2021, 11:34:34) [MSC v.1928 32 bit (Intel)]
+# Embedded file name: <Khanh9872>
+
+-- Stacks of completed symbols:
+START ::= |- stmts . 
+_come_froms ::= \e__come_froms . COME_FROM
+_come_froms ::= \e__come_froms COME_FROM . 
+_come_froms ::= _come_froms . COME_FROM
+_come_froms ::= _come_froms COME_FROM . 
+_stmts ::= stmts . 
+alias ::= IMPORT_FROM . store
+alias ::= IMPORT_FROM store . 
+alias ::= IMPORT_NAME . attributes store
+alias ::= IMPORT_NAME . store
+alias ::= IMPORT_NAME store . 
+alias37 ::= IMPORT_NAME . store
+alias37 ::= IMPORT_NAME store . 
+and_cond ::= and_parts . expr_pjif \e__come_froms
+and_cond ::= and_parts . expr_pjif _come_froms
+and_cond ::= testfalse . expr_pjif \e__come_froms
+and_cond ::= testfalse . expr_pjif _come_froms
+and_not ::= expr_pjif . expr_pjit
+and_or_cond ::= and_parts . expr POP_JUMP_IF_TRUE come_froms expr_pjif \e__come_froms
+and_or_cond ::= and_parts . expr POP_JUMP_IF_TRUE come_froms expr_pjif _come_froms
+and_or_cond ::= and_parts expr . POP_JUMP_IF_TRUE come_froms expr_pjif \e__come_froms
+and_or_cond ::= and_parts expr . POP_JUMP_IF_TRUE come_froms expr_pjif _come_froms
+and_or_expr ::= and_parts . expr jitop_come_from_expr COME_FROM
+and_or_expr ::= and_parts expr . jitop_come_from_expr COME_FROM
+and_parts ::= and_parts . expr_pjif
+and_parts ::= expr_pjif . 
+assert2 ::= expr . POP_JUMP_IF_TRUE LOAD_GLOBAL expr CALL_FUNCTION_1 RAISE_VARARGS_1
+assert2 ::= expr POP_JUMP_IF_TRUE . LOAD_GLOBAL expr CALL_FUNCTION_1 RAISE_VARARGS_1
+assert2_not ::= expr . POP_JUMP_IF_FALSE LOAD_GLOBAL expr CALL_FUNCTION_1 RAISE_VARARGS_1
+assert2_not ::= expr POP_JUMP_IF_FALSE . LOAD_GLOBAL expr CALL_FUNCTION_1 RAISE_VARARGS_1
+assert_invert ::= testtrue . LOAD_GLOBAL RAISE_VARARGS_1
+assign ::= expr . DUP_TOP designList
+assign ::= expr . store
+assign ::= expr store . 
+assign2 ::= expr . expr ROT_TWO store store
+assign2 ::= expr expr . ROT_TWO store store
+assign3 ::= expr . expr expr ROT_THREE ROT_TWO store store store
+assign3 ::= expr expr . expr ROT_THREE ROT_TWO store store store
+assign3 ::= expr expr expr . ROT_THREE ROT_TWO store store store
+async_with_stmt38 ::= expr . BEFORE_ASYNC_WITH GET_AWAITABLE LOAD_CONST YIELD_FROM SETUP_ASYNC_WITH POP_TOP \e_c_stmts_opt POP_BLOCK BEGIN_FINALLY COME_FROM_ASYNC_WITH WITH_CLEANUP_START GET_AWAITABLE LOAD_CONST YIELD_FROM WITH_CLEANUP_FINISH END_FINALLY
+async_with_stmt38 ::= expr . BEFORE_ASYNC_WITH GET_AWAITABLE LOAD_CONST YIELD_FROM SETUP_ASYNC_WITH POP_TOP \e_c_stmts_opt POP_BLOCK BEGIN_FINALLY WITH_CLEANUP_START GET_AWAITABLE LOAD_CONST YIELD_FROM WITH_CLEANUP_FINISH POP_FINALLY
+async_with_stmt38 ::= expr . BEFORE_ASYNC_WITH GET_AWAITABLE LOAD_CONST YIELD_FROM SETUP_ASYNC_WITH POP_TOP \e_c_stmts_opt POP_BLOCK BEGIN_FINALLY WITH_CLEANUP_START GET_AWAITABLE LOAD_CONST YIELD_FROM WITH_CLEANUP_FINISH POP_FINALLY JUMP_LOOP
+async_with_stmt38 ::= expr . BEFORE_ASYNC_WITH GET_AWAITABLE LOAD_CONST YIELD_FROM SETUP_ASYNC_WITH POP_TOP c_stmts_opt POP_BLOCK BEGIN_FINALLY COME_FROM_ASYNC_WITH WITH_CLEANUP_START GET_AWAITABLE LOAD_CONST YIELD_FROM WITH_CLEANUP_FINISH END_FINALLY
+async_with_stmt38 ::= expr . BEFORE_ASYNC_WITH GET_AWAITABLE LOAD_CONST YIELD_FROM SETUP_ASYNC_WITH POP_TOP c_stmts_opt POP_BLOCK BEGIN_FINALLY WITH_CLEANUP_START GET_AWAITABLE LOAD_CONST YIELD_FROM WITH_CLEANUP_FINISH POP_FINALLY
+async_with_stmt38 ::= expr . BEFORE_ASYNC_WITH GET_AWAITABLE LOAD_CONST YIELD_FROM SETUP_ASYNC_WITH POP_TOP c_stmts_opt POP_BLOCK BEGIN_FINALLY WITH_CLEANUP_START GET_AWAITABLE LOAD_CONST YIELD_FROM WITH_CLEANUP_FINISH POP_FINALLY JUMP_LOOP
+attribute ::= expr . LOAD_ATTR
+attribute ::= expr LOAD_ATTR . 
+attribute37 ::= expr . LOAD_METHOD
+attribute37 ::= expr LOAD_METHOD . 
+aug_assign1 ::= expr . expr inplace_op ROT_THREE STORE_SUBSCR
+aug_assign1 ::= expr . expr inplace_op store
+aug_assign1 ::= expr expr . inplace_op ROT_THREE STORE_SUBSCR
+aug_assign1 ::= expr expr . inplace_op store
+aug_assign2 ::= expr . DUP_TOP LOAD_ATTR expr inplace_op ROT_TWO STORE_ATTR
+await_expr ::= expr . GET_AWAITABLE LOAD_CONST YIELD_FROM
+bin_op ::= expr . expr binary_operator
+bin_op ::= expr expr . binary_operator
+bin_op ::= expr expr binary_operator . 
+binary_operator ::= BINARY_ADD . 
+break ::= POP_BLOCK . BREAK_LOOP
+break ::= POP_BLOCK . POP_TOP BREAK_LOOP
+break ::= POP_BLOCK . POP_TOP JUMP_FORWARD
+break ::= POP_EXCEPT . BREAK_LOOP
+break ::= POP_EXCEPT . JUMP_FORWARD
+break ::= POP_EXCEPT JUMP_FORWARD . 
+break ::= POP_TOP . BREAK_LOOP
+break ::= POP_TOP . CONTINUE JUMP_LOOP
+c_compare_chained37 ::= expr . c_compare_chained1a_37
+c_compare_chained37_false ::= expr . c_compare_chained1b_false_37
+c_compare_chained37_false ::= expr . c_compare_chained2_false_37
+c_forelsestmt38 ::= expr . get_for_iter store for_block JUMP_LOOP \e__come_froms else_suitec
+c_forelsestmt38 ::= expr . get_for_iter store for_block JUMP_LOOP _come_froms else_suitec
+c_forelsestmt38 ::= expr . get_for_iter store for_block POP_BLOCK else_suitec
+c_nand ::= and_parts . expr_pjitt come_froms
+c_returns ::= c_stmts . return
+c_stmt ::= c_try_except . 
+c_stmt ::= ifelsestmtc . 
+c_stmt ::= ifstmtc . 
+c_stmt ::= pop_tops . return
+c_stmt ::= stmt . 
+c_stmts ::= _stmts . 
+c_stmts ::= _stmts . lastc_stmt
+c_stmts ::= _stmts lastc_stmt . 
+c_stmts ::= c_stmt . 
+c_stmts ::= c_stmts . c_stmt
+c_stmts ::= c_stmts c_stmt . 
+c_stmts ::= lastc_stmt . 
+c_stmts_opt ::= c_stmts . 
+c_suite_stmts ::= c_stmts . 
+c_suite_stmts ::= suite_stmts . 
+c_suite_stmts_opt ::= c_suite_stmts . 
+c_suite_stmts_opt ::= suite_stmts_opt . 
+c_try_except ::= SETUP_FINALLY . c_suite_stmts POP_BLOCK except_handler38
+c_try_except ::= SETUP_FINALLY c_suite_stmts . POP_BLOCK except_handler38
+c_try_except ::= SETUP_FINALLY c_suite_stmts POP_BLOCK . except_handler38
+c_try_except ::= SETUP_FINALLY c_suite_stmts POP_BLOCK except_handler38 . 
+c_tryfinallystmt ::= SETUP_FINALLY . c_suite_stmts_opt POP_BLOCK LOAD_CONST COME_FROM_FINALLY \e_c_suite_stmts_opt END_FINALLY
+c_tryfinallystmt ::= SETUP_FINALLY . c_suite_stmts_opt POP_BLOCK LOAD_CONST COME_FROM_FINALLY c_suite_stmts_opt END_FINALLY
+c_tryfinallystmt ::= SETUP_FINALLY \e_c_suite_stmts_opt . POP_BLOCK LOAD_CONST COME_FROM_FINALLY \e_c_suite_stmts_opt END_FINALLY
+c_tryfinallystmt ::= SETUP_FINALLY \e_c_suite_stmts_opt . POP_BLOCK LOAD_CONST COME_FROM_FINALLY c_suite_stmts_opt END_FINALLY
+c_tryfinallystmt ::= SETUP_FINALLY c_suite_stmts_opt . POP_BLOCK LOAD_CONST COME_FROM_FINALLY \e_c_suite_stmts_opt END_FINALLY
+c_tryfinallystmt ::= SETUP_FINALLY c_suite_stmts_opt . POP_BLOCK LOAD_CONST COME_FROM_FINALLY c_suite_stmts_opt END_FINALLY
+c_tryfinallystmt ::= SETUP_FINALLY c_suite_stmts_opt POP_BLOCK . LOAD_CONST COME_FROM_FINALLY \e_c_suite_stmts_opt END_FINALLY
+c_tryfinallystmt ::= SETUP_FINALLY c_suite_stmts_opt POP_BLOCK . LOAD_CONST COME_FROM_FINALLY c_suite_stmts_opt END_FINALLY
+c_tryfinallystmt38 ::= SETUP_FINALLY . c_suite_stmts_opt POP_BLOCK BEGIN_FINALLY COME_FROM COME_FROM_FINALLY \e_c_suite_stmts_opt END_FINALLY
+c_tryfinallystmt38 ::= SETUP_FINALLY . c_suite_stmts_opt POP_BLOCK BEGIN_FINALLY COME_FROM COME_FROM_FINALLY c_suite_stmts_opt END_FINALLY
+c_tryfinallystmt38 ::= SETUP_FINALLY . c_suite_stmts_opt POP_BLOCK CALL_FINALLY POP_BLOCK POP_EXCEPT CALL_FINALLY JUMP_FORWARD POP_BLOCK BEGIN_FINALLY COME_FROM COME_FROM_FINALLY \e_c_suite_stmts_opt END_FINALLY
+c_tryfinallystmt38 ::= SETUP_FINALLY . c_suite_stmts_opt POP_BLOCK CALL_FINALLY POP_BLOCK POP_EXCEPT CALL_FINALLY JUMP_FORWARD POP_BLOCK BEGIN_FINALLY COME_FROM COME_FROM_FINALLY c_suite_stmts_opt END_FINALLY
+c_tryfinallystmt38 ::= SETUP_FINALLY \e_c_suite_stmts_opt . POP_BLOCK BEGIN_FINALLY COME_FROM COME_FROM_FINALLY \e_c_suite_stmts_opt END_FINALLY
+c_tryfinallystmt38 ::= SETUP_FINALLY \e_c_suite_stmts_opt . POP_BLOCK BEGIN_FINALLY COME_FROM COME_FROM_FINALLY c_suite_stmts_opt END_FINALLY
+c_tryfinallystmt38 ::= SETUP_FINALLY \e_c_suite_stmts_opt . POP_BLOCK CALL_FINALLY POP_BLOCK POP_EXCEPT CALL_FINALLY JUMP_FORWARD POP_BLOCK BEGIN_FINALLY COME_FROM COME_FROM_FINALLY \e_c_suite_stmts_opt END_FINALLY
+c_tryfinallystmt38 ::= SETUP_FINALLY \e_c_suite_stmts_opt . POP_BLOCK CALL_FINALLY POP_BLOCK POP_EXCEPT CALL_FINALLY JUMP_FORWARD POP_BLOCK BEGIN_FINALLY COME_FROM COME_FROM_FINALLY c_suite_stmts_opt END_FINALLY
+c_tryfinallystmt38 ::= SETUP_FINALLY c_suite_stmts_opt . POP_BLOCK BEGIN_FINALLY COME_FROM COME_FROM_FINALLY \e_c_suite_stmts_opt END_FINALLY
+c_tryfinallystmt38 ::= SETUP_FINALLY c_suite_stmts_opt . POP_BLOCK BEGIN_FINALLY COME_FROM COME_FROM_FINALLY c_suite_stmts_opt END_FINALLY
+c_tryfinallystmt38 ::= SETUP_FINALLY c_suite_stmts_opt . POP_BLOCK CALL_FINALLY POP_BLOCK POP_EXCEPT CALL_FINALLY JUMP_FORWARD POP_BLOCK BEGIN_FINALLY COME_FROM COME_FROM_FINALLY \e_c_suite_stmts_opt END_FINALLY
+c_tryfinallystmt38 ::= SETUP_FINALLY c_suite_stmts_opt . POP_BLOCK CALL_FINALLY POP_BLOCK POP_EXCEPT CALL_FINALLY JUMP_FORWARD POP_BLOCK BEGIN_FINALLY COME_FROM COME_FROM_FINALLY c_suite_stmts_opt END_FINALLY
+c_tryfinallystmt38 ::= SETUP_FINALLY c_suite_stmts_opt POP_BLOCK . BEGIN_FINALLY COME_FROM COME_FROM_FINALLY \e_c_suite_stmts_opt END_FINALLY
+c_tryfinallystmt38 ::= SETUP_FINALLY c_suite_stmts_opt POP_BLOCK . BEGIN_FINALLY COME_FROM COME_FROM_FINALLY c_suite_stmts_opt END_FINALLY
+c_tryfinallystmt38 ::= SETUP_FINALLY c_suite_stmts_opt POP_BLOCK . CALL_FINALLY POP_BLOCK POP_EXCEPT CALL_FINALLY JUMP_FORWARD POP_BLOCK BEGIN_FINALLY COME_FROM COME_FROM_FINALLY \e_c_suite_stmts_opt END_FINALLY
+c_tryfinallystmt38 ::= SETUP_FINALLY c_suite_stmts_opt POP_BLOCK . CALL_FINALLY POP_BLOCK POP_EXCEPT CALL_FINALLY JUMP_FORWARD POP_BLOCK BEGIN_FINALLY COME_FROM COME_FROM_FINALLY c_suite_stmts_opt END_FINALLY
+c_tryfinallystmt38 ::= SETUP_FINALLY c_suite_stmts_opt POP_BLOCK BEGIN_FINALLY . COME_FROM COME_FROM_FINALLY \e_c_suite_stmts_opt END_FINALLY
+c_tryfinallystmt38 ::= SETUP_FINALLY c_suite_stmts_opt POP_BLOCK BEGIN_FINALLY . COME_FROM COME_FROM_FINALLY c_suite_stmts_opt END_FINALLY
+call ::= expr . CALL_FUNCTION_0
+call ::= expr . CALL_METHOD_0
+call ::= expr . expr CALL_FUNCTION_1
+call ::= expr . expr CALL_METHOD_1
+call ::= expr . expr expr CALL_FUNCTION_2
+call ::= expr . expr expr CALL_METHOD_2
+call ::= expr . expr expr expr CALL_METHOD_3
+call ::= expr . expr expr expr expr expr expr CALL_METHOD_6
+call ::= expr CALL_FUNCTION_0 . 
+call ::= expr CALL_METHOD_0 . 
+call ::= expr expr . CALL_FUNCTION_1
+call ::= expr expr . CALL_METHOD_1
+call ::= expr expr . expr CALL_FUNCTION_2
+call ::= expr expr . expr CALL_METHOD_2
+call ::= expr expr . expr expr CALL_METHOD_3
+call ::= expr expr . expr expr expr expr expr CALL_METHOD_6
+call ::= expr expr CALL_FUNCTION_1 . 
+call ::= expr expr CALL_METHOD_1 . 
+call ::= expr expr expr . CALL_FUNCTION_2
+call ::= expr expr expr . CALL_METHOD_2
+call ::= expr expr expr . expr CALL_METHOD_3
+call ::= expr expr expr . expr expr expr expr CALL_METHOD_6
+call ::= expr expr expr CALL_FUNCTION_2 . 
+call ::= expr expr expr CALL_METHOD_2 . 
+call ::= expr expr expr expr . CALL_METHOD_3
+call ::= expr expr expr expr . expr expr expr CALL_METHOD_6
+call ::= expr expr expr expr expr . expr expr CALL_METHOD_6
+call ::= expr expr expr expr expr expr . expr CALL_METHOD_6
+call ::= expr expr expr expr expr expr expr . CALL_METHOD_6
+call ::= expr expr expr expr expr expr expr CALL_METHOD_6 . 
+call_kw36 ::= expr . expr expr LOAD_CONST CALL_FUNCTION_KW_2
+call_kw36 ::= expr expr . expr LOAD_CONST CALL_FUNCTION_KW_2
+call_kw36 ::= expr expr expr . LOAD_CONST CALL_FUNCTION_KW_2
+call_kw36 ::= expr expr expr LOAD_CONST . CALL_FUNCTION_KW_2
+call_kw36 ::= expr expr expr LOAD_CONST CALL_FUNCTION_KW_2 . 
+call_stmt ::= call . 
+cf_jump_back ::= COME_FROM . JUMP_LOOP
+cf_pt ::= COME_FROM . POP_TOP
+chained_part ::= expr . DUP_TOP ROT_THREE COMPARE_OP \e_come_from_opt POP_JUMP_IF_FALSE
+chained_part ::= expr . DUP_TOP ROT_THREE COMPARE_OP come_from_opt POP_JUMP_IF_FALSE
+classdefdeco1 ::= expr . classdefdeco1 CALL_FUNCTION_1
+classdefdeco1 ::= expr . classdefdeco2 CALL_FUNCTION_1
+come_any_from ::= COME_FROM . 
+come_any_froms ::= come_any_from . 
+come_any_froms ::= come_any_froms . come_any_from
+come_any_froms ::= come_any_froms come_any_from . 
+come_from_opt ::= COME_FROM . 
+come_froms ::= COME_FROM . 
+come_froms ::= come_froms . COME_FROM
+come_froms ::= come_froms COME_FROM . 
+compare ::= compare_single . 
+compare_chained ::= expr . compare_chained1 ROT_TWO POP_TOP \e__come_froms
+compare_chained ::= expr . compare_chained1 ROT_TWO POP_TOP _come_froms
+compare_chained1 ::= expr . DUP_TOP ROT_THREE COMPARE_OP JUMP_IF_FALSE_OR_POP compare_chained1 COME_FROM
+compare_chained1 ::= expr . DUP_TOP ROT_THREE COMPARE_OP JUMP_IF_FALSE_OR_POP compare_chained2 COME_FROM
+compare_chained37 ::= expr . chained_parts
+compare_chained37 ::= expr . compare_chained1a_37
+compare_chained37 ::= expr . compare_chained1c_37
+compare_chained37_false ::= expr . compare_chained1_false_37
+compare_chained37_false ::= expr . compare_chained1b_false_37
+compare_chained37_false ::= expr . compare_chained2_false_37
+compare_chained_and ::= expr . chained_parts compare_chained2a_false_37 come_froms POP_TOP JUMP_FORWARD COME_FROM negated_testtrue come_froms
+compare_single ::= expr . expr COMPARE_OP
+compare_single ::= expr expr . COMPARE_OP
+compare_single ::= expr expr COMPARE_OP . 
+cond_except_stmt ::= except_cond1 . except_stmts
+cond_except_stmts_opt ::= \e_cond_except_stmts_opt . cond_except_stmt
+continue ::= POP_EXCEPT . JUMP_LOOP
+continues ::= _stmts . lastc_stmt continue
+continues ::= _stmts lastc_stmt . continue
+continues ::= lastc_stmt . continue
+delete ::= DELETE_NAME . 
+delete ::= delete_subscript . 
+delete_subscript ::= expr . expr DELETE_SUBSCR
+delete_subscript ::= expr expr . DELETE_SUBSCR
+delete_subscript ::= expr expr DELETE_SUBSCR . 
+else_suite ::= suite_stmts . 
+else_suite_opt ::= else_suite . 
+else_suitec ::= c_stmts . 
+else_suitec ::= suite_stmts . 
+except ::= POP_TOP . POP_TOP POP_TOP \e_c_stmts_opt POP_EXCEPT JUMP_FORWARD
+except ::= POP_TOP . POP_TOP POP_TOP \e_c_stmts_opt break POP_EXCEPT JUMP_LOOP
+except ::= POP_TOP . POP_TOP POP_TOP c_stmts_opt POP_EXCEPT JUMP_FORWARD
+except ::= POP_TOP . POP_TOP POP_TOP c_stmts_opt break POP_EXCEPT JUMP_LOOP
+except ::= POP_TOP . POP_TOP POP_TOP returns
+except ::= POP_TOP POP_TOP . POP_TOP \e_c_stmts_opt POP_EXCEPT JUMP_FORWARD
+except ::= POP_TOP POP_TOP . POP_TOP \e_c_stmts_opt break POP_EXCEPT JUMP_LOOP
+except ::= POP_TOP POP_TOP . POP_TOP c_stmts_opt POP_EXCEPT JUMP_FORWARD
+except ::= POP_TOP POP_TOP . POP_TOP c_stmts_opt break POP_EXCEPT JUMP_LOOP
+except ::= POP_TOP POP_TOP . POP_TOP returns
+except ::= POP_TOP POP_TOP POP_TOP . c_stmts_opt POP_EXCEPT JUMP_FORWARD
+except ::= POP_TOP POP_TOP POP_TOP . c_stmts_opt break POP_EXCEPT JUMP_LOOP
+except ::= POP_TOP POP_TOP POP_TOP . returns
+except ::= POP_TOP POP_TOP POP_TOP \e_c_stmts_opt . POP_EXCEPT JUMP_FORWARD
+except ::= POP_TOP POP_TOP POP_TOP \e_c_stmts_opt . break POP_EXCEPT JUMP_LOOP
+except ::= POP_TOP POP_TOP POP_TOP c_stmts_opt . POP_EXCEPT JUMP_FORWARD
+except ::= POP_TOP POP_TOP POP_TOP c_stmts_opt . break POP_EXCEPT JUMP_LOOP
+except ::= POP_TOP POP_TOP POP_TOP c_stmts_opt POP_EXCEPT . JUMP_FORWARD
+except ::= POP_TOP POP_TOP POP_TOP c_stmts_opt POP_EXCEPT JUMP_FORWARD . 
+except_cond1 ::= DUP_TOP . expr COMPARE_OP POP_JUMP_IF_FALSE POP_TOP POP_TOP POP_TOP
+except_cond1 ::= DUP_TOP . expr COMPARE_OP POP_JUMP_IF_FALSE POP_TOP POP_TOP POP_TOP POP_EXCEPT
+except_cond1 ::= DUP_TOP expr . COMPARE_OP POP_JUMP_IF_FALSE POP_TOP POP_TOP POP_TOP
+except_cond1 ::= DUP_TOP expr . COMPARE_OP POP_JUMP_IF_FALSE POP_TOP POP_TOP POP_TOP POP_EXCEPT
+except_cond1 ::= DUP_TOP expr COMPARE_OP . POP_JUMP_IF_FALSE POP_TOP POP_TOP POP_TOP
+except_cond1 ::= DUP_TOP expr COMPARE_OP . POP_JUMP_IF_FALSE POP_TOP POP_TOP POP_TOP POP_EXCEPT
+except_cond1 ::= DUP_TOP expr COMPARE_OP POP_JUMP_IF_FALSE . POP_TOP POP_TOP POP_TOP
+except_cond1 ::= DUP_TOP expr COMPARE_OP POP_JUMP_IF_FALSE . POP_TOP POP_TOP POP_TOP POP_EXCEPT
+except_cond1 ::= DUP_TOP expr COMPARE_OP POP_JUMP_IF_FALSE POP_TOP . POP_TOP POP_TOP
+except_cond1 ::= DUP_TOP expr COMPARE_OP POP_JUMP_IF_FALSE POP_TOP . POP_TOP POP_TOP POP_EXCEPT
+except_cond1 ::= DUP_TOP expr COMPARE_OP POP_JUMP_IF_FALSE POP_TOP POP_TOP . POP_TOP
+except_cond1 ::= DUP_TOP expr COMPARE_OP POP_JUMP_IF_FALSE POP_TOP POP_TOP . POP_TOP POP_EXCEPT
+except_cond1 ::= DUP_TOP expr COMPARE_OP POP_JUMP_IF_FALSE POP_TOP POP_TOP POP_TOP . 
+except_cond1 ::= DUP_TOP expr COMPARE_OP POP_JUMP_IF_FALSE POP_TOP POP_TOP POP_TOP . POP_EXCEPT
+except_cond1 ::= DUP_TOP expr COMPARE_OP POP_JUMP_IF_FALSE POP_TOP POP_TOP POP_TOP POP_EXCEPT . 
+except_cond1a ::= DUP_TOP . expr COMPARE_OP POP_JUMP_IF_FALSE POP_TOP POP_TOP POP_TOP
+except_cond1a ::= DUP_TOP expr . COMPARE_OP POP_JUMP_IF_FALSE POP_TOP POP_TOP POP_TOP
+except_cond1a ::= DUP_TOP expr COMPARE_OP . POP_JUMP_IF_FALSE POP_TOP POP_TOP POP_TOP
+except_cond1a ::= DUP_TOP expr COMPARE_OP POP_JUMP_IF_FALSE . POP_TOP POP_TOP POP_TOP
+except_cond1a ::= DUP_TOP expr COMPARE_OP POP_JUMP_IF_FALSE POP_TOP . POP_TOP POP_TOP
+except_cond1a ::= DUP_TOP expr COMPARE_OP POP_JUMP_IF_FALSE POP_TOP POP_TOP . POP_TOP
+except_cond1a ::= DUP_TOP expr COMPARE_OP POP_JUMP_IF_FALSE POP_TOP POP_TOP POP_TOP . 
+except_cond2 ::= DUP_TOP . expr COMPARE_OP POP_JUMP_IF_FALSE POP_TOP store POP_TOP \e_come_from_opt
+except_cond2 ::= DUP_TOP . expr COMPARE_OP POP_JUMP_IF_FALSE POP_TOP store POP_TOP come_from_opt
+except_cond2 ::= DUP_TOP expr . COMPARE_OP POP_JUMP_IF_FALSE POP_TOP store POP_TOP \e_come_from_opt
+except_cond2 ::= DUP_TOP expr . COMPARE_OP POP_JUMP_IF_FALSE POP_TOP store POP_TOP come_from_opt
+except_cond2 ::= DUP_TOP expr COMPARE_OP . POP_JUMP_IF_FALSE POP_TOP store POP_TOP \e_come_from_opt
+except_cond2 ::= DUP_TOP expr COMPARE_OP . POP_JUMP_IF_FALSE POP_TOP store POP_TOP come_from_opt
+except_cond2 ::= DUP_TOP expr COMPARE_OP POP_JUMP_IF_FALSE . POP_TOP store POP_TOP \e_come_from_opt
+except_cond2 ::= DUP_TOP expr COMPARE_OP POP_JUMP_IF_FALSE . POP_TOP store POP_TOP come_from_opt
+except_cond2 ::= DUP_TOP expr COMPARE_OP POP_JUMP_IF_FALSE POP_TOP . store POP_TOP \e_come_from_opt
+except_cond2 ::= DUP_TOP expr COMPARE_OP POP_JUMP_IF_FALSE POP_TOP . store POP_TOP come_from_opt
+except_cond2 ::= DUP_TOP expr COMPARE_OP POP_JUMP_IF_FALSE POP_TOP store . POP_TOP \e_come_from_opt
+except_cond2 ::= DUP_TOP expr COMPARE_OP POP_JUMP_IF_FALSE POP_TOP store . POP_TOP come_from_opt
+except_cond2 ::= DUP_TOP expr COMPARE_OP POP_JUMP_IF_FALSE POP_TOP store POP_TOP . come_from_opt
+except_cond2 ::= DUP_TOP expr COMPARE_OP POP_JUMP_IF_FALSE POP_TOP store POP_TOP \e_come_from_opt . 
+except_handler38 ::= jump . COME_FROM_FINALLY except_stmts END_FINALLY \e_opt_come_from_except
+except_handler38 ::= jump . COME_FROM_FINALLY except_stmts END_FINALLY opt_come_from_except
+except_handler38 ::= jump COME_FROM_FINALLY . except_stmts END_FINALLY \e_opt_come_from_except
+except_handler38 ::= jump COME_FROM_FINALLY . except_stmts END_FINALLY opt_come_from_except
+except_handler38 ::= jump COME_FROM_FINALLY except_stmts . END_FINALLY \e_opt_come_from_except
+except_handler38 ::= jump COME_FROM_FINALLY except_stmts . END_FINALLY opt_come_from_except
+except_handler38 ::= jump COME_FROM_FINALLY except_stmts END_FINALLY . opt_come_from_except
+except_handler38 ::= jump COME_FROM_FINALLY except_stmts END_FINALLY \e_opt_come_from_except . 
+except_handler38 ::= jump COME_FROM_FINALLY except_stmts END_FINALLY opt_come_from_except . 
+except_ret38 ::= SETUP_FINALLY . expr ROT_FOUR POP_BLOCK POP_EXCEPT CALL_FINALLY RETURN_VALUE COME_FROM COME_FROM_FINALLY \e_suite_stmts_opt END_FINALLY
+except_ret38 ::= SETUP_FINALLY . expr ROT_FOUR POP_BLOCK POP_EXCEPT CALL_FINALLY RETURN_VALUE COME_FROM COME_FROM_FINALLY suite_stmts_opt END_FINALLY
+except_ret38 ::= SETUP_FINALLY expr . ROT_FOUR POP_BLOCK POP_EXCEPT CALL_FINALLY RETURN_VALUE COME_FROM COME_FROM_FINALLY \e_suite_stmts_opt END_FINALLY
+except_ret38 ::= SETUP_FINALLY expr . ROT_FOUR POP_BLOCK POP_EXCEPT CALL_FINALLY RETURN_VALUE COME_FROM COME_FROM_FINALLY suite_stmts_opt END_FINALLY
+except_stmt ::= except . 
+except_stmt ::= except_cond1 . except_suite \e_come_from_opt
+except_stmt ::= except_cond1 . except_suite come_from_opt
+except_stmt ::= except_cond1 except_suite . come_from_opt
+except_stmt ::= except_cond1 except_suite \e_come_from_opt . 
+except_stmt ::= except_cond1 except_suite come_from_opt . 
+except_stmt ::= except_cond1a . except_suite \e_come_from_opt
+except_stmt ::= except_cond1a . except_suite come_from_opt
+except_stmt ::= except_cond1a except_suite . come_from_opt
+except_stmt ::= except_cond1a except_suite \e_come_from_opt . 
+except_stmt ::= except_cond1a except_suite come_from_opt . 
+except_stmt ::= except_cond2 . except_suite \e_come_from_opt
+except_stmt ::= except_cond2 . except_suite come_from_opt
+except_stmt ::= except_cond2 . except_suite_finalize
+except_stmt ::= except_cond2 except_suite . come_from_opt
+except_stmt ::= except_cond2 except_suite \e_come_from_opt . 
+except_stmt ::= except_cond2 except_suite come_from_opt . 
+except_stmts ::= except_stmt . 
+except_stmts ::= except_stmts . except_stmt
+except_stmts ::= except_stmts except_stmt . 
+except_suite ::= \e_c_stmts_opt . COME_FROM POP_EXCEPT jump_except COME_FROM
+except_suite ::= \e_c_stmts_opt . POP_EXCEPT jump_except
+except_suite ::= \e_c_stmts_opt POP_EXCEPT . jump_except
+except_suite ::= \e_c_stmts_opt POP_EXCEPT jump_except . 
+except_suite ::= c_stmts_opt . COME_FROM POP_EXCEPT jump_except COME_FROM
+except_suite ::= c_stmts_opt . POP_EXCEPT jump_except
+except_suite ::= c_stmts_opt POP_EXCEPT . jump_except
+except_suite ::= c_stmts_opt POP_EXCEPT jump_except . 
+except_suite_finalize ::= SETUP_FINALLY . c_stmts_opt except_var_finalize END_FINALLY POP_EXCEPT jump
+except_suite_finalize ::= SETUP_FINALLY . c_stmts_opt except_var_finalize END_FINALLY jump
+except_suite_finalize ::= SETUP_FINALLY . returns COME_FROM_FINALLY \e_suite_stmts_opt END_FINALLY jump
+except_suite_finalize ::= SETUP_FINALLY . returns COME_FROM_FINALLY suite_stmts_opt END_FINALLY jump
+except_suite_finalize ::= SETUP_FINALLY \e_c_stmts_opt . except_var_finalize END_FINALLY POP_EXCEPT jump
+except_suite_finalize ::= SETUP_FINALLY \e_c_stmts_opt . except_var_finalize END_FINALLY jump
+except_suite_finalize ::= SETUP_FINALLY c_stmts_opt . except_var_finalize END_FINALLY POP_EXCEPT jump
+except_suite_finalize ::= SETUP_FINALLY c_stmts_opt . except_var_finalize END_FINALLY jump
+except_var_finalize ::= POP_BLOCK . LOAD_CONST COME_FROM_FINALLY LOAD_CONST store delete
+except_var_finalize ::= POP_BLOCK . POP_EXCEPT LOAD_CONST COME_FROM_FINALLY LOAD_CONST store delete
+expr ::= LOAD_CODE . 
+expr ::= LOAD_CONST . 
+expr ::= LOAD_GLOBAL . 
+expr ::= LOAD_NAME . 
+expr ::= LOAD_STR . 
+expr ::= attribute . 
+expr ::= attribute37 . 
+expr ::= bin_op . 
+expr ::= call . 
+expr ::= call_kw36 . 
+expr ::= compare . 
+expr ::= list . 
+expr ::= not . 
+expr ::= or . 
+expr ::= slice2 . 
+expr ::= subscript . 
+expr ::= tuple . 
+expr_jifop ::= expr . JUMP_IF_FALSE_OR_POP
+expr_jifop_cfs ::= expr . JUMP_IF_FALSE_OR_POP \e__come_froms
+expr_jifop_cfs ::= expr . JUMP_IF_FALSE_OR_POP _come_froms
+expr_jitop ::= expr . JUMP_IF_TRUE_OR_POP
+expr_pjif ::= expr . POP_JUMP_IF_FALSE
+expr_pjif ::= expr POP_JUMP_IF_FALSE . 
+expr_pjit ::= expr . POP_JUMP_IF_TRUE
+expr_pjit ::= expr POP_JUMP_IF_TRUE . 
+expr_pjitt ::= expr . pjump_ift
+expr_stmt ::= expr . POP_TOP
+expr_stmt ::= expr POP_TOP . 
+for38 ::= expr . get_for_iter store for_block JUMP_LOOP \e__come_froms
+for38 ::= expr . get_for_iter store for_block JUMP_LOOP \e__come_froms POP_BLOCK
+for38 ::= expr . get_for_iter store for_block JUMP_LOOP _come_froms
+for38 ::= expr . get_for_iter store for_block JUMP_LOOP _come_froms POP_BLOCK
+for38 ::= expr . get_for_iter store for_block \e__come_froms
+for38 ::= expr . get_for_iter store for_block _come_froms
+for38 ::= expr . get_iter store for_block JUMP_LOOP \e__come_froms
+for38 ::= expr . get_iter store for_block JUMP_LOOP _come_froms
+forelselaststmt38 ::= expr . get_for_iter store for_block POP_BLOCK else_suitec
+forelselaststmtc38 ::= expr . get_for_iter store for_block POP_BLOCK else_suitec
+forelsestmt38 ::= expr . get_for_iter store for_block JUMP_LOOP \e__come_froms else_suite
+forelsestmt38 ::= expr . get_for_iter store for_block JUMP_LOOP _come_froms else_suite
+forelsestmt38 ::= expr . get_for_iter store for_block POP_BLOCK else_suite
+formatted_value1 ::= expr . FORMAT_VALUE
+function_def ::= mkfunc . store
+function_def ::= mkfunc store . 
+get_iter ::= expr . GET_ITER
+if_and_elsestmtc ::= expr_pjif . expr_pjif c_stmts jb_cfs else_suitec \e_opt_come_from_except
+if_and_elsestmtc ::= expr_pjif . expr_pjif c_stmts jb_cfs else_suitec opt_come_from_except
+if_and_stmt ::= expr_pjif . expr COME_FROM stmts \e__come_froms
+if_and_stmt ::= expr_pjif . expr COME_FROM stmts _come_froms
+if_and_stmt ::= expr_pjif expr . COME_FROM stmts \e__come_froms
+if_and_stmt ::= expr_pjif expr . COME_FROM stmts _come_froms
+if_exp ::= expr_pjif . expr jf_cf expr COME_FROM
+if_exp ::= expr_pjif . expr jump_forward_else expr
+if_exp ::= expr_pjif . expr jump_forward_else expr come_froms
+if_exp ::= expr_pjif expr . jf_cf expr COME_FROM
+if_exp ::= expr_pjif expr . jump_forward_else expr
+if_exp ::= expr_pjif expr . jump_forward_else expr come_froms
+if_exp_37b ::= expr_pjif . expr_pjif jump_forward_else expr
+if_exp_compare ::= expr . expr jf_cfs expr COME_FROM
+if_exp_compare ::= expr expr . jf_cfs expr COME_FROM
+if_exp_loop ::= expr_pjif . expr POP_JUMP_IF_FALSE_LOOP JUMP_FORWARD come_froms expr
+if_exp_loop ::= expr_pjif expr . POP_JUMP_IF_FALSE_LOOP JUMP_FORWARD come_froms expr
+if_exp_not ::= expr . POP_JUMP_IF_TRUE expr jump_forward_else expr COME_FROM
+if_exp_not ::= expr POP_JUMP_IF_TRUE . expr jump_forward_else expr COME_FROM
+if_exp_not ::= expr POP_JUMP_IF_TRUE expr . jump_forward_else expr COME_FROM
+if_exp_true ::= expr . JUMP_FORWARD expr COME_FROM
+if_or_not_elsestmt ::= expr . POP_JUMP_IF_TRUE \e_come_from_opt expr POP_JUMP_IF_TRUE come_froms stmts jf_cfs else_suite \e_opt_come_from_except
+if_or_not_elsestmt ::= expr . POP_JUMP_IF_TRUE \e_come_from_opt expr POP_JUMP_IF_TRUE come_froms stmts jf_cfs else_suite opt_come_from_except
+if_or_not_elsestmt ::= expr . POP_JUMP_IF_TRUE come_from_opt expr POP_JUMP_IF_TRUE come_froms stmts jf_cfs else_suite \e_opt_come_from_except
+if_or_not_elsestmt ::= expr . POP_JUMP_IF_TRUE come_from_opt expr POP_JUMP_IF_TRUE come_froms stmts jf_cfs else_suite opt_come_from_except
+if_or_not_elsestmt ::= expr POP_JUMP_IF_TRUE . come_from_opt expr POP_JUMP_IF_TRUE come_froms stmts jf_cfs else_suite \e_opt_come_from_except
+if_or_not_elsestmt ::= expr POP_JUMP_IF_TRUE . come_from_opt expr POP_JUMP_IF_TRUE come_froms stmts jf_cfs else_suite opt_come_from_except
+if_or_not_elsestmt ::= expr POP_JUMP_IF_TRUE \e_come_from_opt . expr POP_JUMP_IF_TRUE come_froms stmts jf_cfs else_suite \e_opt_come_from_except
+if_or_not_elsestmt ::= expr POP_JUMP_IF_TRUE \e_come_from_opt . expr POP_JUMP_IF_TRUE come_froms stmts jf_cfs else_suite opt_come_from_except
+if_or_not_elsestmt ::= expr POP_JUMP_IF_TRUE \e_come_from_opt expr . POP_JUMP_IF_TRUE come_froms stmts jf_cfs else_suite \e_opt_come_from_except
+if_or_not_elsestmt ::= expr POP_JUMP_IF_TRUE \e_come_from_opt expr . POP_JUMP_IF_TRUE come_froms stmts jf_cfs else_suite opt_come_from_except
+if_or_stmt ::= expr . POP_JUMP_IF_TRUE expr pop_jump come_froms stmts COME_FROM
+if_or_stmt ::= expr POP_JUMP_IF_TRUE . expr pop_jump come_froms stmts COME_FROM
+if_or_stmt ::= expr POP_JUMP_IF_TRUE expr . pop_jump come_froms stmts COME_FROM
+if_or_stmt ::= expr POP_JUMP_IF_TRUE expr pop_jump . come_froms stmts COME_FROM
+if_or_stmt ::= expr POP_JUMP_IF_TRUE expr pop_jump come_froms . stmts COME_FROM
+if_or_stmt ::= expr POP_JUMP_IF_TRUE expr pop_jump come_froms stmts . COME_FROM
+ifelsestmt ::= testexpr . stmts_opt JUMP_FORWARD else_suite \e__come_froms
+ifelsestmt ::= testexpr . stmts_opt JUMP_FORWARD else_suite _come_froms
+ifelsestmt ::= testexpr . stmts_opt jf_cfs \e_else_suite_opt \e_opt_come_from_except
+ifelsestmt ::= testexpr . stmts_opt jf_cfs \e_else_suite_opt opt_come_from_except
+ifelsestmt ::= testexpr . stmts_opt jf_cfs else_suite_opt \e_opt_come_from_except
+ifelsestmt ::= testexpr . stmts_opt jf_cfs else_suite_opt opt_come_from_except
+ifelsestmt ::= testexpr \e_stmts_opt . JUMP_FORWARD else_suite \e__come_froms
+ifelsestmt ::= testexpr \e_stmts_opt . JUMP_FORWARD else_suite _come_froms
+ifelsestmt ::= testexpr \e_stmts_opt . jf_cfs \e_else_suite_opt \e_opt_come_from_except
+ifelsestmt ::= testexpr \e_stmts_opt . jf_cfs \e_else_suite_opt opt_come_from_except
+ifelsestmt ::= testexpr \e_stmts_opt . jf_cfs else_suite_opt \e_opt_come_from_except
+ifelsestmt ::= testexpr \e_stmts_opt . jf_cfs else_suite_opt opt_come_from_except
+ifelsestmt ::= testexpr stmts_opt . JUMP_FORWARD else_suite \e__come_froms
+ifelsestmt ::= testexpr stmts_opt . JUMP_FORWARD else_suite _come_froms
+ifelsestmt ::= testexpr stmts_opt . jf_cfs \e_else_suite_opt \e_opt_come_from_except
+ifelsestmt ::= testexpr stmts_opt . jf_cfs \e_else_suite_opt opt_come_from_except
+ifelsestmt ::= testexpr stmts_opt . jf_cfs else_suite_opt \e_opt_come_from_except
+ifelsestmt ::= testexpr stmts_opt . jf_cfs else_suite_opt opt_come_from_except
+ifelsestmt ::= testexpr stmts_opt JUMP_FORWARD . else_suite \e__come_froms
+ifelsestmt ::= testexpr stmts_opt JUMP_FORWARD . else_suite _come_froms
+ifelsestmt ::= testexpr stmts_opt jf_cfs . else_suite_opt \e_opt_come_from_except
+ifelsestmt ::= testexpr stmts_opt jf_cfs . else_suite_opt opt_come_from_except
+ifelsestmt ::= testexpr stmts_opt jf_cfs \e_else_suite_opt . opt_come_from_except
+ifelsestmt ::= testexpr stmts_opt jf_cfs \e_else_suite_opt \e_opt_come_from_except . 
+ifelsestmt ::= testexpr stmts_opt jf_cfs \e_else_suite_opt opt_come_from_except . 
+ifelsestmt ::= testexpr stmts_opt jf_cfs else_suite_opt . opt_come_from_except
+ifelsestmt ::= testexpr stmts_opt jf_cfs else_suite_opt \e_opt_come_from_except . 
+ifelsestmt ::= testexpr stmts_opt jf_cfs else_suite_opt opt_come_from_except . 
+ifelsestmtc ::= testexpr . c_stmts cf_pt else_suite
+ifelsestmtc ::= testexpr . c_stmts come_froms else_suite
+ifelsestmtc ::= testexpr . c_stmts_opt JUMP_FORWARD else_suite \e__come_froms
+ifelsestmtc ::= testexpr . c_stmts_opt JUMP_FORWARD else_suite _come_froms
+ifelsestmtc ::= testexpr . c_stmts_opt JUMP_FORWARD else_suitec
+ifelsestmtc ::= testexpr . c_stmts_opt JUMP_LOOP else_suitec JUMP_LOOP
+ifelsestmtc ::= testexpr . c_stmts_opt cf_jump_back else_suitec
+ifelsestmtc ::= testexpr . c_stmts_opt jb_cfs else_suitec
+ifelsestmtc ::= testexpr . c_stmts_opt jb_cfs else_suitec JUMP_LOOP come_froms
+ifelsestmtc ::= testexpr . c_stmts_opt jump_forward_else else_suitec \e_opt_come_from_except
+ifelsestmtc ::= testexpr . c_stmts_opt jump_forward_else else_suitec opt_come_from_except
+ifelsestmtc ::= testexpr \e_c_stmts_opt . JUMP_FORWARD else_suite \e__come_froms
+ifelsestmtc ::= testexpr \e_c_stmts_opt . JUMP_FORWARD else_suite _come_froms
+ifelsestmtc ::= testexpr \e_c_stmts_opt . JUMP_FORWARD else_suitec
+ifelsestmtc ::= testexpr \e_c_stmts_opt . JUMP_LOOP else_suitec JUMP_LOOP
+ifelsestmtc ::= testexpr \e_c_stmts_opt . cf_jump_back else_suitec
+ifelsestmtc ::= testexpr \e_c_stmts_opt . jb_cfs else_suitec
+ifelsestmtc ::= testexpr \e_c_stmts_opt . jb_cfs else_suitec JUMP_LOOP come_froms
+ifelsestmtc ::= testexpr \e_c_stmts_opt . jump_forward_else else_suitec \e_opt_come_from_except
+ifelsestmtc ::= testexpr \e_c_stmts_opt . jump_forward_else else_suitec opt_come_from_except
+ifelsestmtc ::= testexpr c_stmts . cf_pt else_suite
+ifelsestmtc ::= testexpr c_stmts . come_froms else_suite
+ifelsestmtc ::= testexpr c_stmts come_froms . else_suite
+ifelsestmtc ::= testexpr c_stmts come_froms else_suite . 
+ifelsestmtc ::= testexpr c_stmts_opt . JUMP_FORWARD else_suite \e__come_froms
+ifelsestmtc ::= testexpr c_stmts_opt . JUMP_FORWARD else_suite _come_froms
+ifelsestmtc ::= testexpr c_stmts_opt . JUMP_FORWARD else_suitec
+ifelsestmtc ::= testexpr c_stmts_opt . JUMP_LOOP else_suitec JUMP_LOOP
+ifelsestmtc ::= testexpr c_stmts_opt . cf_jump_back else_suitec
+ifelsestmtc ::= testexpr c_stmts_opt . jb_cfs else_suitec
+ifelsestmtc ::= testexpr c_stmts_opt . jb_cfs else_suitec JUMP_LOOP come_froms
+ifelsestmtc ::= testexpr c_stmts_opt . jump_forward_else else_suitec \e_opt_come_from_except
+ifelsestmtc ::= testexpr c_stmts_opt . jump_forward_else else_suitec opt_come_from_except
+ifelsestmtc ::= testexpr c_stmts_opt JUMP_FORWARD . else_suite \e__come_froms
+ifelsestmtc ::= testexpr c_stmts_opt JUMP_FORWARD . else_suite _come_froms
+ifelsestmtc ::= testexpr c_stmts_opt JUMP_FORWARD . else_suitec
+ifelsestmtc ::= testexpr c_stmts_opt jump_forward_else . else_suitec \e_opt_come_from_except
+ifelsestmtc ::= testexpr c_stmts_opt jump_forward_else . else_suitec opt_come_from_except
+ifelsestmtc ::= testexpr c_stmts_opt jump_forward_else else_suitec . opt_come_from_except
+ifelsestmtc ::= testexpr c_stmts_opt jump_forward_else else_suitec \e_opt_come_from_except . 
+ifelsestmtc ::= testexpr c_stmts_opt jump_forward_else else_suitec opt_come_from_except . 
+ifelsestmtc ::= testexpr_cf . c_stmts_opt jb_cf else_suitec
+ifelsestmtc ::= testexpr_cf \e_c_stmts_opt . jb_cf else_suitec
+ifelsestmtc ::= testexpr_cf c_stmts_opt . jb_cf else_suitec
+ifelsestmtr ::= testexpr . return_if_stmts returns
+iflaststmt ::= testexpr . returns
+iflaststmt ::= testexpr . stmts
+iflaststmt ::= testexpr . stmts JUMP_FORWARD
+iflaststmt ::= testexpr . stmts_opt JUMP_FORWARD
+iflaststmt ::= testexpr \e_stmts_opt . JUMP_FORWARD
+iflaststmt ::= testexpr stmts . 
+iflaststmt ::= testexpr stmts . JUMP_FORWARD
+iflaststmt ::= testexpr stmts JUMP_FORWARD . 
+iflaststmt ::= testexpr stmts_opt . JUMP_FORWARD
+iflaststmt ::= testexpr stmts_opt JUMP_FORWARD . 
+iflaststmtc ::= testexpr . c_stmts
+iflaststmtc ::= testexpr . c_stmts JUMP_LOOP
+iflaststmtc ::= testexpr . c_stmts JUMP_LOOP COME_FROM_LOOP
+iflaststmtc ::= testexpr . c_stmts JUMP_LOOP POP_BLOCK
+iflaststmtc ::= testexpr . c_stmts come_froms
+iflaststmtc ::= testexpr c_stmts . 
+iflaststmtc ::= testexpr c_stmts . JUMP_LOOP
+iflaststmtc ::= testexpr c_stmts . JUMP_LOOP COME_FROM_LOOP
+iflaststmtc ::= testexpr c_stmts . JUMP_LOOP POP_BLOCK
+iflaststmtc ::= testexpr c_stmts . come_froms
+iflaststmtc ::= testexpr c_stmts come_froms . 
+iflaststmtc ::= testexprc . c_stmts
+iflaststmtc ::= testexprc . c_stmts JUMP_LOOP COME_FROM_LOOP
+iflaststmtc ::= testexprc . c_stmts JUMP_LOOP \e_opt_pop_block
+iflaststmtc ::= testexprc . c_stmts JUMP_LOOP opt_pop_block
+iflaststmtc ::= testexprc c_stmts . 
+iflaststmtc ::= testexprc c_stmts . JUMP_LOOP COME_FROM_LOOP
+iflaststmtc ::= testexprc c_stmts . JUMP_LOOP \e_opt_pop_block
+iflaststmtc ::= testexprc c_stmts . JUMP_LOOP opt_pop_block
+ifpoplaststmtc ::= testexpr . POP_TOP \e_c_stmts_opt
+ifpoplaststmtc ::= testexpr . POP_TOP c_stmts_opt
+ifstmt ::= testexpr . ifstmts_jump \e__come_froms
+ifstmt ::= testexpr . ifstmts_jump _come_froms
+ifstmt ::= testexpr . stmts \e__come_froms
+ifstmt ::= testexpr . stmts _come_froms
+ifstmt ::= testexpr ifstmts_jump . _come_froms
+ifstmt ::= testexpr ifstmts_jump \e__come_froms . 
+ifstmt ::= testexpr ifstmts_jump _come_froms . 
+ifstmt ::= testexpr stmts . _come_froms
+ifstmt ::= testexpr stmts \e__come_froms . 
+ifstmt ::= testexpr stmts _come_froms . 
+ifstmt_bool ::= not_and_not . stmts come_froms
+ifstmt_bool ::= not_and_not stmts . come_froms
+ifstmt_bool ::= or_and1 . stmts come_froms
+ifstmt_bool ::= or_and1 stmts . come_froms
+ifstmtc ::= testexpr . ifstmts_jumpc
+ifstmtc ::= testexpr ifstmts_jumpc . 
+ifstmtc ::= testexprc . ifstmts_jumpc \e__come_froms
+ifstmtc ::= testexprc . ifstmts_jumpc _come_froms
+ifstmtc ::= testexprc ifstmts_jumpc . _come_froms
+ifstmtc ::= testexprc ifstmts_jumpc \e__come_froms . 
+ifstmtc ::= testexprc ifstmts_jumpc _come_froms . 
+ifstmts_jump ::= COME_FROM . stmts COME_FROM
+ifstmts_jump ::= COME_FROM . stmts come_froms
+ifstmts_jump ::= COME_FROM stmts . COME_FROM
+ifstmts_jump ::= COME_FROM stmts . come_froms
+ifstmts_jump ::= \e_stmts_opt . JUMP_FORWARD JUMP_FORWARD \e__come_froms
+ifstmts_jump ::= \e_stmts_opt . JUMP_FORWARD JUMP_FORWARD _come_froms
+ifstmts_jump ::= \e_stmts_opt . come_froms
+ifstmts_jump ::= \e_stmts_opt come_froms . 
+ifstmts_jump ::= stmts . come_froms
+ifstmts_jump ::= stmts come_froms . 
+ifstmts_jump ::= stmts_opt . JUMP_FORWARD JUMP_FORWARD \e__come_froms
+ifstmts_jump ::= stmts_opt . JUMP_FORWARD JUMP_FORWARD _come_froms
+ifstmts_jump ::= stmts_opt . come_froms
+ifstmts_jump ::= stmts_opt JUMP_FORWARD . JUMP_FORWARD \e__come_froms
+ifstmts_jump ::= stmts_opt JUMP_FORWARD . JUMP_FORWARD _come_froms
+ifstmts_jump ::= stmts_opt come_froms . 
+ifstmts_jumpc ::= COME_FROM . c_stmts JUMP_FORWARD
+ifstmts_jumpc ::= COME_FROM . c_stmts JUMP_LOOP
+ifstmts_jumpc ::= COME_FROM . c_stmts come_froms
+ifstmts_jumpc ::= COME_FROM c_stmts . JUMP_FORWARD
+ifstmts_jumpc ::= COME_FROM c_stmts . JUMP_LOOP
+ifstmts_jumpc ::= COME_FROM c_stmts . come_froms
+ifstmts_jumpc ::= COME_FROM c_stmts JUMP_FORWARD . 
+ifstmts_jumpc ::= \e_c_stmts_opt . come_froms
+ifstmts_jumpc ::= \e_c_stmts_opt come_froms . 
+ifstmts_jumpc ::= c_stmts . 
+ifstmts_jumpc ::= c_stmts . JUMP_LOOP
+ifstmts_jumpc ::= c_stmts_opt . come_froms
+ifstmts_jumpc ::= c_stmts_opt come_froms . 
+ifstmts_jumpc ::= ifstmts_jump . 
+import ::= LOAD_CONST . LOAD_CONST alias
+import ::= LOAD_CONST LOAD_CONST . alias
+import ::= LOAD_CONST LOAD_CONST alias . 
+import_as37 ::= LOAD_CONST . LOAD_CONST importlist37 store POP_TOP
+import_as37 ::= LOAD_CONST LOAD_CONST . importlist37 store POP_TOP
+import_as37 ::= LOAD_CONST LOAD_CONST importlist37 . store POP_TOP
+import_cont ::= LOAD_CONST . LOAD_CONST alias
+import_cont ::= LOAD_CONST LOAD_CONST . alias
+import_cont ::= LOAD_CONST LOAD_CONST alias . 
+import_from ::= LOAD_CONST . LOAD_CONST IMPORT_NAME importlist POP_TOP
+import_from ::= LOAD_CONST . LOAD_CONST importlist POP_TOP
+import_from ::= LOAD_CONST LOAD_CONST . IMPORT_NAME importlist POP_TOP
+import_from ::= LOAD_CONST LOAD_CONST . importlist POP_TOP
+import_from ::= LOAD_CONST LOAD_CONST IMPORT_NAME . importlist POP_TOP
+import_from ::= LOAD_CONST LOAD_CONST IMPORT_NAME importlist . POP_TOP
+import_from ::= LOAD_CONST LOAD_CONST IMPORT_NAME importlist POP_TOP . 
+import_from ::= LOAD_CONST LOAD_CONST importlist . POP_TOP
+import_from37 ::= LOAD_CONST . LOAD_CONST IMPORT_NAME_ATTR importlist37 POP_TOP
+import_from37 ::= LOAD_CONST LOAD_CONST . IMPORT_NAME_ATTR importlist37 POP_TOP
+import_from_as37 ::= LOAD_CONST . LOAD_CONST import_from_attr37 store POP_TOP
+import_from_as37 ::= LOAD_CONST LOAD_CONST . import_from_attr37 store POP_TOP
+import_from_star ::= LOAD_CONST . LOAD_CONST IMPORT_NAME IMPORT_STAR
+import_from_star ::= LOAD_CONST . LOAD_CONST IMPORT_NAME_ATTR IMPORT_STAR
+import_from_star ::= LOAD_CONST LOAD_CONST . IMPORT_NAME IMPORT_STAR
+import_from_star ::= LOAD_CONST LOAD_CONST . IMPORT_NAME_ATTR IMPORT_STAR
+import_from_star ::= LOAD_CONST LOAD_CONST IMPORT_NAME . IMPORT_STAR
+import_from_star ::= LOAD_CONST LOAD_CONST IMPORT_NAME IMPORT_STAR . 
+import_one ::= importlists . ROT_TWO IMPORT_FROM
+import_one ::= importlists . ROT_TWO POP_TOP IMPORT_FROM
+importlist ::= alias . 
+importlist ::= importlist . alias
+importlist ::= importlist alias . 
+importlist37 ::= alias37 . 
+importlist37 ::= importlist37 . alias37
+importlists ::= importlist37 . 
+importlists ::= importlists . importlist37
+importmultiple ::= LOAD_CONST . LOAD_CONST alias imports_cont
+importmultiple ::= LOAD_CONST LOAD_CONST . alias imports_cont
+importmultiple ::= LOAD_CONST LOAD_CONST alias . imports_cont
+importmultiple ::= LOAD_CONST LOAD_CONST alias imports_cont . 
+imports_cont ::= import_cont . 
+imports_cont ::= imports_cont . import_cont
+imports_cont ::= imports_cont import_cont . 
+jb_cfs ::= \e_come_from_opt . JUMP_LOOP come_froms
+jb_cfs ::= come_from_opt . JUMP_LOOP come_froms
+jf_cfs ::= JUMP_FORWARD . _come_froms
+jf_cfs ::= JUMP_FORWARD \e__come_froms . 
+jf_cfs ::= JUMP_FORWARD _come_froms . 
+joined_str ::= expr . expr expr BUILD_STRING_3
+joined_str ::= expr . expr expr expr BUILD_STRING_4
+joined_str ::= expr expr . expr BUILD_STRING_3
+joined_str ::= expr expr . expr expr BUILD_STRING_4
+joined_str ::= expr expr expr . BUILD_STRING_3
+joined_str ::= expr expr expr . expr BUILD_STRING_4
+joined_str ::= expr expr expr expr . BUILD_STRING_4
+jump ::= JUMP_FORWARD . 
+jump_except ::= JUMP_FORWARD . 
+jump_forward_else ::= JUMP_FORWARD . _come_froms
+jump_forward_else ::= JUMP_FORWARD \e__come_froms . 
+jump_forward_else ::= JUMP_FORWARD _come_froms . 
+jump_forward_else ::= come_froms . jump COME_FROM
+jump_if_false_cf ::= POP_JUMP_IF_FALSE . COME_FROM
+jump_if_false_cf ::= POP_JUMP_IF_FALSE COME_FROM . 
+lambda_body ::= expr . LOAD_LAMBDA LOAD_STR MAKE_FUNCTION_1
+lastc_stmt ::= ifelsestmtc . 
+lc_setup_finally ::= LOAD_CONST . SETUP_FINALLY
+list ::= BUILD_LIST_0 . 
+list_comp ::= BUILD_LIST_0 . list_iter
+list_unpack ::= BUILD_LIST_0 . expr LIST_EXTEND
+mkfunc ::= LOAD_CODE . LOAD_STR MAKE_FUNCTION_0
+mkfunc ::= LOAD_CODE LOAD_STR . MAKE_FUNCTION_0
+mkfunc ::= LOAD_CODE LOAD_STR MAKE_FUNCTION_0 . 
+mkfunc ::= expr . LOAD_CODE LOAD_STR MAKE_FUNCTION_1
+mkfunc ::= expr LOAD_CODE . LOAD_STR MAKE_FUNCTION_1
+mkfunc ::= expr LOAD_CODE LOAD_STR . MAKE_FUNCTION_1
+mkfunc ::= expr LOAD_CODE LOAD_STR MAKE_FUNCTION_1 . 
+mkfuncdeco ::= expr . mkfuncdeco CALL_FUNCTION_1
+mkfuncdeco ::= expr . mkfuncdeco0 CALL_FUNCTION_1
+named_expr ::= expr . DUP_TOP store
+nand ::= and_parts . expr_pjit come_froms
+nor_cond ::= or_parts . expr_pjif
+nor_cond ::= or_parts expr_pjif . 
+not ::= expr_pjit . 
+not_and_not ::= not . expr_pjif COME_FROM
+not_and_not ::= not expr_pjif . COME_FROM
+not_and_not ::= not expr_pjif COME_FROM . 
+not_or ::= and_parts . expr_pjif \e__come_froms
+not_or ::= and_parts . expr_pjif _come_froms
+opt_come_from_except ::= come_any_froms . 
+or ::= expr_pjit . expr COME_FROM
+or ::= expr_pjit . expr jump_if_false_cf
+or ::= expr_pjit expr . COME_FROM
+or ::= expr_pjit expr . jump_if_false_cf
+or ::= expr_pjit expr jump_if_false_cf . 
+or ::= or_parts . expr
+or ::= or_parts expr . 
+or_and1 ::= or_parts . and_parts come_froms
+or_and1 ::= or_parts and_parts . come_froms
+or_and1 ::= or_parts and_parts come_froms . 
+or_and_not ::= expr_pjit . and_not COME_FROM
+or_cond ::= not_and_not . expr_pjif come_froms
+or_cond ::= or_parts . expr_pjif come_froms
+or_cond ::= or_parts expr_pjif . come_froms
+or_cond ::= or_parts expr_pjif come_froms . 
+or_expr ::= expr . JUMP_IF_TRUE expr COME_FROM
+or_parts ::= expr_pjit . 
+or_parts ::= or_parts . expr_pjit
+pop_ex_return ::= return_expr . ROT_FOUR POP_EXCEPT RETURN_VALUE
+pop_jump ::= POP_JUMP_IF_FALSE . 
+pop_return ::= POP_TOP . return_expr RETURN_VALUE
+pop_return ::= POP_TOP return_expr . RETURN_VALUE
+pop_tops ::= POP_TOP . 
+pop_tops ::= pop_tops . POP_TOP
+pop_tops ::= pop_tops POP_TOP . 
+popb_return ::= return_expr . POP_BLOCK RETURN_VALUE
+return ::= return_expr . RETURN_END_IF
+return ::= return_expr . RETURN_VALUE
+return ::= return_expr . discard_tops RETURN_VALUE
+return_except ::= stmts . POP_BLOCK return
+return_except ::= stmts POP_BLOCK . return
+return_expr ::= expr . 
+return_if_stmt ::= return_expr . RETURN_END_IF
+return_if_stmt ::= return_expr . RETURN_END_IF POP_BLOCK
+return_if_stmts ::= _stmts . return_if_stmt \e__come_froms
+return_if_stmts ::= _stmts . return_if_stmt _come_froms
+returns ::= _stmts . return
+returns ::= _stmts . return_if_stmt
+sf_pb_call_returns ::= SETUP_FINALLY . POP_BLOCK CALL_FINALLY returns
+sf_pb_call_returns ::= SETUP_FINALLY . POP_BLOCK POP_EXCEPT CALL_FINALLY returns
+slice2 ::= expr . expr BUILD_SLICE_2
+slice2 ::= expr expr . BUILD_SLICE_2
+slice2 ::= expr expr BUILD_SLICE_2 . 
+sstmt ::= sstmt . RETURN_LAST
+sstmt ::= stmt . 
+stmt ::= assign . 
+stmt ::= call_stmt . 
+stmt ::= delete . 
+stmt ::= expr_stmt . 
+stmt ::= function_def . 
+stmt ::= ifelsestmt . 
+stmt ::= ifstmt . 
+stmt ::= import . 
+stmt ::= import_from . 
+stmt ::= import_from_star . 
+stmt ::= importmultiple . 
+stmt ::= try_elsestmtl38 . 
+stmt ::= try_except . 
+stmt ::= tryfinallystmt . 
+stmts ::= sstmt . 
+stmts ::= stmt . 
+stmts ::= stmts . last_stmt
+stmts ::= stmts . sstmt
+stmts ::= stmts . stmt
+stmts ::= stmts sstmt . 
+stmts ::= stmts stmt . 
+stmts_opt ::= stmts . 
+store ::= STORE_GLOBAL . 
+store ::= STORE_NAME . 
+store ::= expr . STORE_ATTR
+store ::= store_subscript . 
+store ::= unpack . 
+store_subscript ::= expr . expr STORE_SUBSCR
+store_subscript ::= expr expr . STORE_SUBSCR
+store_subscript ::= expr expr STORE_SUBSCR . 
+subscript ::= expr . expr BINARY_SUBSCR
+subscript ::= expr expr . BINARY_SUBSCR
+subscript ::= expr expr BINARY_SUBSCR . 
+subscript2 ::= expr . expr DUP_TOP_TWO BINARY_SUBSCR
+subscript2 ::= expr expr . DUP_TOP_TWO BINARY_SUBSCR
+suite_stmts ::= _stmts . 
+suite_stmts_opt ::= suite_stmts . 
+testexpr ::= testfalse . 
+testexpr ::= testtrue . 
+testexpr_cf ::= testexpr . come_froms
+testexpr_cf ::= testexpr come_froms . 
+testexprc ::= testexpr . 
+testfalse ::= expr_pjif . 
+testfalse ::= or . POP_JUMP_IF_FALSE COME_FROM
+testfalse ::= or POP_JUMP_IF_FALSE . COME_FROM
+testfalse ::= or POP_JUMP_IF_FALSE COME_FROM . 
+testfalse ::= or_cond . 
+testfalsec ::= expr . POP_JUMP_IF_TRUE_LOOP
+testtrue ::= expr_pjit . 
+testtrue ::= nor_cond . 
+testtruec ::= expr . POP_JUMP_IF_FALSE_LOOP
+try_elsestmtl38 ::= SETUP_FINALLY . suite_stmts_opt POP_BLOCK except_handler38 COME_FROM else_suitec \e_opt_come_from_except
+try_elsestmtl38 ::= SETUP_FINALLY . suite_stmts_opt POP_BLOCK except_handler38 COME_FROM else_suitec opt_come_from_except
+try_elsestmtl38 ::= SETUP_FINALLY \e_suite_stmts_opt . POP_BLOCK except_handler38 COME_FROM else_suitec \e_opt_come_from_except
+try_elsestmtl38 ::= SETUP_FINALLY \e_suite_stmts_opt . POP_BLOCK except_handler38 COME_FROM else_suitec opt_come_from_except
+try_elsestmtl38 ::= SETUP_FINALLY suite_stmts_opt . POP_BLOCK except_handler38 COME_FROM else_suitec \e_opt_come_from_except
+try_elsestmtl38 ::= SETUP_FINALLY suite_stmts_opt . POP_BLOCK except_handler38 COME_FROM else_suitec opt_come_from_except
+try_elsestmtl38 ::= SETUP_FINALLY suite_stmts_opt POP_BLOCK . except_handler38 COME_FROM else_suitec \e_opt_come_from_except
+try_elsestmtl38 ::= SETUP_FINALLY suite_stmts_opt POP_BLOCK . except_handler38 COME_FROM else_suitec opt_come_from_except
+try_elsestmtl38 ::= SETUP_FINALLY suite_stmts_opt POP_BLOCK except_handler38 . COME_FROM else_suitec \e_opt_come_from_except
+try_elsestmtl38 ::= SETUP_FINALLY suite_stmts_opt POP_BLOCK except_handler38 . COME_FROM else_suitec opt_come_from_except
+try_elsestmtl38 ::= SETUP_FINALLY suite_stmts_opt POP_BLOCK except_handler38 COME_FROM . else_suitec \e_opt_come_from_except
+try_elsestmtl38 ::= SETUP_FINALLY suite_stmts_opt POP_BLOCK except_handler38 COME_FROM . else_suitec opt_come_from_except
+try_elsestmtl38 ::= SETUP_FINALLY suite_stmts_opt POP_BLOCK except_handler38 COME_FROM else_suitec . opt_come_from_except
+try_elsestmtl38 ::= SETUP_FINALLY suite_stmts_opt POP_BLOCK except_handler38 COME_FROM else_suitec \e_opt_come_from_except . 
+try_elsestmtl38 ::= SETUP_FINALLY suite_stmts_opt POP_BLOCK except_handler38 COME_FROM else_suitec opt_come_from_except . 
+try_except ::= SETUP_FINALLY . suite_stmts_opt POP_BLOCK except_handler38
+try_except ::= SETUP_FINALLY . suite_stmts_opt POP_BLOCK except_handler38 jump_excepts \e_come_from_except_clauses
+try_except ::= SETUP_FINALLY . suite_stmts_opt POP_BLOCK except_handler38 jump_excepts come_from_except_clauses
+try_except ::= SETUP_FINALLY \e_suite_stmts_opt . POP_BLOCK except_handler38
+try_except ::= SETUP_FINALLY \e_suite_stmts_opt . POP_BLOCK except_handler38 jump_excepts \e_come_from_except_clauses
+try_except ::= SETUP_FINALLY \e_suite_stmts_opt . POP_BLOCK except_handler38 jump_excepts come_from_except_clauses
+try_except ::= SETUP_FINALLY suite_stmts_opt . POP_BLOCK except_handler38
+try_except ::= SETUP_FINALLY suite_stmts_opt . POP_BLOCK except_handler38 jump_excepts \e_come_from_except_clauses
+try_except ::= SETUP_FINALLY suite_stmts_opt . POP_BLOCK except_handler38 jump_excepts come_from_except_clauses
+try_except ::= SETUP_FINALLY suite_stmts_opt POP_BLOCK . except_handler38
+try_except ::= SETUP_FINALLY suite_stmts_opt POP_BLOCK . except_handler38 jump_excepts \e_come_from_except_clauses
+try_except ::= SETUP_FINALLY suite_stmts_opt POP_BLOCK . except_handler38 jump_excepts come_from_except_clauses
+try_except ::= SETUP_FINALLY suite_stmts_opt POP_BLOCK except_handler38 . 
+try_except ::= SETUP_FINALLY suite_stmts_opt POP_BLOCK except_handler38 . jump_excepts \e_come_from_except_clauses
+try_except ::= SETUP_FINALLY suite_stmts_opt POP_BLOCK except_handler38 . jump_excepts come_from_except_clauses
+try_except38 ::= SETUP_FINALLY . POP_BLOCK POP_TOP \e_suite_stmts_opt except_handler38a
+try_except38 ::= SETUP_FINALLY . POP_BLOCK POP_TOP suite_stmts_opt except_handler38a
+try_except38 ::= SETUP_FINALLY . POP_BLOCK suite_stmts except_handler38b
+try_except38r ::= SETUP_FINALLY . return_except except_handler38b
+try_except38r2 ::= SETUP_FINALLY . suite_stmts_opt POP_BLOCK JUMP_FORWARD COME_FROM_FINALLY POP_TOP POP_TOP POP_TOP \e_cond_except_stmts_opt POP_EXCEPT return END_FINALLY COME_FROM
+try_except38r2 ::= SETUP_FINALLY . suite_stmts_opt POP_BLOCK JUMP_FORWARD COME_FROM_FINALLY POP_TOP POP_TOP POP_TOP cond_except_stmts_opt POP_EXCEPT return END_FINALLY COME_FROM
+try_except38r2 ::= SETUP_FINALLY \e_suite_stmts_opt . POP_BLOCK JUMP_FORWARD COME_FROM_FINALLY POP_TOP POP_TOP POP_TOP \e_cond_except_stmts_opt POP_EXCEPT return END_FINALLY COME_FROM
+try_except38r2 ::= SETUP_FINALLY \e_suite_stmts_opt . POP_BLOCK JUMP_FORWARD COME_FROM_FINALLY POP_TOP POP_TOP POP_TOP cond_except_stmts_opt POP_EXCEPT return END_FINALLY COME_FROM
+try_except38r2 ::= SETUP_FINALLY suite_stmts_opt . POP_BLOCK JUMP_FORWARD COME_FROM_FINALLY POP_TOP POP_TOP POP_TOP \e_cond_except_stmts_opt POP_EXCEPT return END_FINALLY COME_FROM
+try_except38r2 ::= SETUP_FINALLY suite_stmts_opt . POP_BLOCK JUMP_FORWARD COME_FROM_FINALLY POP_TOP POP_TOP POP_TOP cond_except_stmts_opt POP_EXCEPT return END_FINALLY COME_FROM
+try_except38r2 ::= SETUP_FINALLY suite_stmts_opt POP_BLOCK . JUMP_FORWARD COME_FROM_FINALLY POP_TOP POP_TOP POP_TOP \e_cond_except_stmts_opt POP_EXCEPT return END_FINALLY COME_FROM
+try_except38r2 ::= SETUP_FINALLY suite_stmts_opt POP_BLOCK . JUMP_FORWARD COME_FROM_FINALLY POP_TOP POP_TOP POP_TOP cond_except_stmts_opt POP_EXCEPT return END_FINALLY COME_FROM
+try_except38r2 ::= SETUP_FINALLY suite_stmts_opt POP_BLOCK JUMP_FORWARD . COME_FROM_FINALLY POP_TOP POP_TOP POP_TOP \e_cond_except_stmts_opt POP_EXCEPT return END_FINALLY COME_FROM
+try_except38r2 ::= SETUP_FINALLY suite_stmts_opt POP_BLOCK JUMP_FORWARD . COME_FROM_FINALLY POP_TOP POP_TOP POP_TOP cond_except_stmts_opt POP_EXCEPT return END_FINALLY COME_FROM
+try_except38r2 ::= SETUP_FINALLY suite_stmts_opt POP_BLOCK JUMP_FORWARD COME_FROM_FINALLY . POP_TOP POP_TOP POP_TOP \e_cond_except_stmts_opt POP_EXCEPT return END_FINALLY COME_FROM
+try_except38r2 ::= SETUP_FINALLY suite_stmts_opt POP_BLOCK JUMP_FORWARD COME_FROM_FINALLY . POP_TOP POP_TOP POP_TOP cond_except_stmts_opt POP_EXCEPT return END_FINALLY COME_FROM
+try_except38r2 ::= SETUP_FINALLY suite_stmts_opt POP_BLOCK JUMP_FORWARD COME_FROM_FINALLY POP_TOP . POP_TOP POP_TOP \e_cond_except_stmts_opt POP_EXCEPT return END_FINALLY COME_FROM
+try_except38r2 ::= SETUP_FINALLY suite_stmts_opt POP_BLOCK JUMP_FORWARD COME_FROM_FINALLY POP_TOP . POP_TOP POP_TOP cond_except_stmts_opt POP_EXCEPT return END_FINALLY COME_FROM
+try_except38r2 ::= SETUP_FINALLY suite_stmts_opt POP_BLOCK JUMP_FORWARD COME_FROM_FINALLY POP_TOP POP_TOP . POP_TOP \e_cond_except_stmts_opt POP_EXCEPT return END_FINALLY COME_FROM
+try_except38r2 ::= SETUP_FINALLY suite_stmts_opt POP_BLOCK JUMP_FORWARD COME_FROM_FINALLY POP_TOP POP_TOP . POP_TOP cond_except_stmts_opt POP_EXCEPT return END_FINALLY COME_FROM
+try_except38r2 ::= SETUP_FINALLY suite_stmts_opt POP_BLOCK JUMP_FORWARD COME_FROM_FINALLY POP_TOP POP_TOP POP_TOP . cond_except_stmts_opt POP_EXCEPT return END_FINALLY COME_FROM
+try_except38r2 ::= SETUP_FINALLY suite_stmts_opt POP_BLOCK JUMP_FORWARD COME_FROM_FINALLY POP_TOP POP_TOP POP_TOP \e_cond_except_stmts_opt . POP_EXCEPT return END_FINALLY COME_FROM
+try_except38r3 ::= SETUP_FINALLY . suite_stmts_opt POP_BLOCK JUMP_FORWARD COME_FROM_FINALLY \e_cond_except_stmts_opt POP_EXCEPT return COME_FROM END_FINALLY COME_FROM
+try_except38r3 ::= SETUP_FINALLY . suite_stmts_opt POP_BLOCK JUMP_FORWARD COME_FROM_FINALLY cond_except_stmts_opt POP_EXCEPT return COME_FROM END_FINALLY COME_FROM
+try_except38r3 ::= SETUP_FINALLY \e_suite_stmts_opt . POP_BLOCK JUMP_FORWARD COME_FROM_FINALLY \e_cond_except_stmts_opt POP_EXCEPT return COME_FROM END_FINALLY COME_FROM
+try_except38r3 ::= SETUP_FINALLY \e_suite_stmts_opt . POP_BLOCK JUMP_FORWARD COME_FROM_FINALLY cond_except_stmts_opt POP_EXCEPT return COME_FROM END_FINALLY COME_FROM
+try_except38r3 ::= SETUP_FINALLY suite_stmts_opt . POP_BLOCK JUMP_FORWARD COME_FROM_FINALLY \e_cond_except_stmts_opt POP_EXCEPT return COME_FROM END_FINALLY COME_FROM
+try_except38r3 ::= SETUP_FINALLY suite_stmts_opt . POP_BLOCK JUMP_FORWARD COME_FROM_FINALLY cond_except_stmts_opt POP_EXCEPT return COME_FROM END_FINALLY COME_FROM
+try_except38r3 ::= SETUP_FINALLY suite_stmts_opt POP_BLOCK . JUMP_FORWARD COME_FROM_FINALLY \e_cond_except_stmts_opt POP_EXCEPT return COME_FROM END_FINALLY COME_FROM
+try_except38r3 ::= SETUP_FINALLY suite_stmts_opt POP_BLOCK . JUMP_FORWARD COME_FROM_FINALLY cond_except_stmts_opt POP_EXCEPT return COME_FROM END_FINALLY COME_FROM
+try_except38r3 ::= SETUP_FINALLY suite_stmts_opt POP_BLOCK JUMP_FORWARD . COME_FROM_FINALLY \e_cond_except_stmts_opt POP_EXCEPT return COME_FROM END_FINALLY COME_FROM
+try_except38r3 ::= SETUP_FINALLY suite_stmts_opt POP_BLOCK JUMP_FORWARD . COME_FROM_FINALLY cond_except_stmts_opt POP_EXCEPT return COME_FROM END_FINALLY COME_FROM
+try_except38r3 ::= SETUP_FINALLY suite_stmts_opt POP_BLOCK JUMP_FORWARD COME_FROM_FINALLY . cond_except_stmts_opt POP_EXCEPT return COME_FROM END_FINALLY COME_FROM
+try_except38r3 ::= SETUP_FINALLY suite_stmts_opt POP_BLOCK JUMP_FORWARD COME_FROM_FINALLY \e_cond_except_stmts_opt . POP_EXCEPT return COME_FROM END_FINALLY COME_FROM
+try_except_as ::= SETUP_FINALLY . POP_BLOCK suite_stmts except_handler_as END_FINALLY COME_FROM
+try_except_as ::= SETUP_FINALLY . suite_stmts except_handler_as END_FINALLY COME_FROM
+try_except_as ::= SETUP_FINALLY suite_stmts . except_handler_as END_FINALLY COME_FROM
+try_except_ret38 ::= SETUP_FINALLY . returns except_ret38a
+try_except_ret38a ::= SETUP_FINALLY . returns except_handler38c END_FINALLY \e_come_from_opt
+try_except_ret38a ::= SETUP_FINALLY . returns except_handler38c END_FINALLY come_from_opt
+tryfinally36 ::= SETUP_FINALLY . returns COME_FROM_FINALLY suite_stmts
+tryfinally38astmt ::= LOAD_CONST . SETUP_FINALLY \e_suite_stmts_opt POP_BLOCK BEGIN_FINALLY COME_FROM_FINALLY POP_FINALLY POP_TOP \e_suite_stmts_opt END_FINALLY POP_TOP
+tryfinally38astmt ::= LOAD_CONST . SETUP_FINALLY \e_suite_stmts_opt POP_BLOCK BEGIN_FINALLY COME_FROM_FINALLY POP_FINALLY POP_TOP suite_stmts_opt END_FINALLY POP_TOP
+tryfinally38astmt ::= LOAD_CONST . SETUP_FINALLY suite_stmts_opt POP_BLOCK BEGIN_FINALLY COME_FROM_FINALLY POP_FINALLY POP_TOP \e_suite_stmts_opt END_FINALLY POP_TOP
+tryfinally38astmt ::= LOAD_CONST . SETUP_FINALLY suite_stmts_opt POP_BLOCK BEGIN_FINALLY COME_FROM_FINALLY POP_FINALLY POP_TOP suite_stmts_opt END_FINALLY POP_TOP
+tryfinally38rstmt3 ::= SETUP_FINALLY . expr POP_BLOCK CALL_FINALLY RETURN_VALUE COME_FROM COME_FROM_FINALLY ss_end_finally
+tryfinally38rstmt3 ::= SETUP_FINALLY expr . POP_BLOCK CALL_FINALLY RETURN_VALUE COME_FROM COME_FROM_FINALLY ss_end_finally
+tryfinally38stmt ::= SETUP_FINALLY . suite_stmts_opt POP_BLOCK BEGIN_FINALLY COME_FROM_FINALLY POP_FINALLY \e_suite_stmts_opt END_FINALLY
+tryfinally38stmt ::= SETUP_FINALLY . suite_stmts_opt POP_BLOCK BEGIN_FINALLY COME_FROM_FINALLY POP_FINALLY suite_stmts_opt END_FINALLY
+tryfinally38stmt ::= SETUP_FINALLY \e_suite_stmts_opt . POP_BLOCK BEGIN_FINALLY COME_FROM_FINALLY POP_FINALLY \e_suite_stmts_opt END_FINALLY
+tryfinally38stmt ::= SETUP_FINALLY \e_suite_stmts_opt . POP_BLOCK BEGIN_FINALLY COME_FROM_FINALLY POP_FINALLY suite_stmts_opt END_FINALLY
+tryfinally38stmt ::= SETUP_FINALLY suite_stmts_opt . POP_BLOCK BEGIN_FINALLY COME_FROM_FINALLY POP_FINALLY \e_suite_stmts_opt END_FINALLY
+tryfinally38stmt ::= SETUP_FINALLY suite_stmts_opt . POP_BLOCK BEGIN_FINALLY COME_FROM_FINALLY POP_FINALLY suite_stmts_opt END_FINALLY
+tryfinally38stmt ::= SETUP_FINALLY suite_stmts_opt POP_BLOCK . BEGIN_FINALLY COME_FROM_FINALLY POP_FINALLY \e_suite_stmts_opt END_FINALLY
+tryfinally38stmt ::= SETUP_FINALLY suite_stmts_opt POP_BLOCK . BEGIN_FINALLY COME_FROM_FINALLY POP_FINALLY suite_stmts_opt END_FINALLY
+tryfinally38stmt ::= SETUP_FINALLY suite_stmts_opt POP_BLOCK BEGIN_FINALLY . COME_FROM_FINALLY POP_FINALLY \e_suite_stmts_opt END_FINALLY
+tryfinally38stmt ::= SETUP_FINALLY suite_stmts_opt POP_BLOCK BEGIN_FINALLY . COME_FROM_FINALLY POP_FINALLY suite_stmts_opt END_FINALLY
+tryfinally38stmt ::= SETUP_FINALLY suite_stmts_opt POP_BLOCK BEGIN_FINALLY COME_FROM_FINALLY . POP_FINALLY \e_suite_stmts_opt END_FINALLY
+tryfinally38stmt ::= SETUP_FINALLY suite_stmts_opt POP_BLOCK BEGIN_FINALLY COME_FROM_FINALLY . POP_FINALLY suite_stmts_opt END_FINALLY
+tryfinally_return_stmt1 ::= SETUP_FINALLY . suite_stmts_opt POP_BLOCK LOAD_CONST COME_FROM_FINALLY returns
+tryfinally_return_stmt1 ::= SETUP_FINALLY \e_suite_stmts_opt . POP_BLOCK LOAD_CONST COME_FROM_FINALLY returns
+tryfinally_return_stmt1 ::= SETUP_FINALLY suite_stmts_opt . POP_BLOCK LOAD_CONST COME_FROM_FINALLY returns
+tryfinally_return_stmt1 ::= SETUP_FINALLY suite_stmts_opt POP_BLOCK . LOAD_CONST COME_FROM_FINALLY returns
+tryfinally_return_stmt2 ::= SETUP_FINALLY . suite_stmts_opt POP_BLOCK LOAD_CONST COME_FROM_FINALLY
+tryfinally_return_stmt2 ::= SETUP_FINALLY \e_suite_stmts_opt . POP_BLOCK LOAD_CONST COME_FROM_FINALLY
+tryfinally_return_stmt2 ::= SETUP_FINALLY suite_stmts_opt . POP_BLOCK LOAD_CONST COME_FROM_FINALLY
+tryfinally_return_stmt2 ::= SETUP_FINALLY suite_stmts_opt POP_BLOCK . LOAD_CONST COME_FROM_FINALLY
+tryfinallystmt ::= SETUP_FINALLY . suite_stmts_opt POP_BLOCK BEGIN_FINALLY COME_FROM_FINALLY \e_suite_stmts_opt END_FINALLY
+tryfinallystmt ::= SETUP_FINALLY . suite_stmts_opt POP_BLOCK BEGIN_FINALLY COME_FROM_FINALLY suite_stmts_opt END_FINALLY
+tryfinallystmt ::= SETUP_FINALLY \e_suite_stmts_opt . POP_BLOCK BEGIN_FINALLY COME_FROM_FINALLY \e_suite_stmts_opt END_FINALLY
+tryfinallystmt ::= SETUP_FINALLY \e_suite_stmts_opt . POP_BLOCK BEGIN_FINALLY COME_FROM_FINALLY suite_stmts_opt END_FINALLY
+tryfinallystmt ::= SETUP_FINALLY suite_stmts_opt . POP_BLOCK BEGIN_FINALLY COME_FROM_FINALLY \e_suite_stmts_opt END_FINALLY
+tryfinallystmt ::= SETUP_FINALLY suite_stmts_opt . POP_BLOCK BEGIN_FINALLY COME_FROM_FINALLY suite_stmts_opt END_FINALLY
+tryfinallystmt ::= SETUP_FINALLY suite_stmts_opt POP_BLOCK . BEGIN_FINALLY COME_FROM_FINALLY \e_suite_stmts_opt END_FINALLY
+tryfinallystmt ::= SETUP_FINALLY suite_stmts_opt POP_BLOCK . BEGIN_FINALLY COME_FROM_FINALLY suite_stmts_opt END_FINALLY
+tryfinallystmt ::= SETUP_FINALLY suite_stmts_opt POP_BLOCK BEGIN_FINALLY . COME_FROM_FINALLY \e_suite_stmts_opt END_FINALLY
+tryfinallystmt ::= SETUP_FINALLY suite_stmts_opt POP_BLOCK BEGIN_FINALLY . COME_FROM_FINALLY suite_stmts_opt END_FINALLY
+tryfinallystmt ::= SETUP_FINALLY suite_stmts_opt POP_BLOCK BEGIN_FINALLY COME_FROM_FINALLY . suite_stmts_opt END_FINALLY
+tryfinallystmt ::= SETUP_FINALLY suite_stmts_opt POP_BLOCK BEGIN_FINALLY COME_FROM_FINALLY \e_suite_stmts_opt . END_FINALLY
+tryfinallystmt ::= SETUP_FINALLY suite_stmts_opt POP_BLOCK BEGIN_FINALLY COME_FROM_FINALLY suite_stmts_opt . END_FINALLY
+tryfinallystmt ::= SETUP_FINALLY suite_stmts_opt POP_BLOCK BEGIN_FINALLY COME_FROM_FINALLY suite_stmts_opt END_FINALLY . 
+tryfinallystmt_break ::= SETUP_FINALLY . suite_stmts_opt POP_BLOCK POP_EXCEPT CALL_FINALLY JUMP_FORWARD POP_BLOCK BEGIN_FINALLY COME_FROM COME_FROM_FINALLY \e_suite_stmts_opt END_FINALLY
+tryfinallystmt_break ::= SETUP_FINALLY . suite_stmts_opt POP_BLOCK POP_EXCEPT CALL_FINALLY JUMP_FORWARD POP_BLOCK BEGIN_FINALLY COME_FROM COME_FROM_FINALLY suite_stmts_opt END_FINALLY
+tryfinallystmt_break ::= SETUP_FINALLY \e_suite_stmts_opt . POP_BLOCK POP_EXCEPT CALL_FINALLY JUMP_FORWARD POP_BLOCK BEGIN_FINALLY COME_FROM COME_FROM_FINALLY \e_suite_stmts_opt END_FINALLY
+tryfinallystmt_break ::= SETUP_FINALLY \e_suite_stmts_opt . POP_BLOCK POP_EXCEPT CALL_FINALLY JUMP_FORWARD POP_BLOCK BEGIN_FINALLY COME_FROM COME_FROM_FINALLY suite_stmts_opt END_FINALLY
+tryfinallystmt_break ::= SETUP_FINALLY suite_stmts_opt . POP_BLOCK POP_EXCEPT CALL_FINALLY JUMP_FORWARD POP_BLOCK BEGIN_FINALLY COME_FROM COME_FROM_FINALLY \e_suite_stmts_opt END_FINALLY
+tryfinallystmt_break ::= SETUP_FINALLY suite_stmts_opt . POP_BLOCK POP_EXCEPT CALL_FINALLY JUMP_FORWARD POP_BLOCK BEGIN_FINALLY COME_FROM COME_FROM_FINALLY suite_stmts_opt END_FINALLY
+tryfinallystmt_break ::= SETUP_FINALLY suite_stmts_opt POP_BLOCK . POP_EXCEPT CALL_FINALLY JUMP_FORWARD POP_BLOCK BEGIN_FINALLY COME_FROM COME_FROM_FINALLY \e_suite_stmts_opt END_FINALLY
+tryfinallystmt_break ::= SETUP_FINALLY suite_stmts_opt POP_BLOCK . POP_EXCEPT CALL_FINALLY JUMP_FORWARD POP_BLOCK BEGIN_FINALLY COME_FROM COME_FROM_FINALLY suite_stmts_opt END_FINALLY
+tuple ::= expr . expr BUILD_TUPLE_2
+tuple ::= expr expr . BUILD_TUPLE_2
+tuple ::= expr expr BUILD_TUPLE_2 . 
+unary_not ::= expr . UNARY_NOT
+unary_op ::= expr . unary_operator
+unpack ::= UNPACK_SEQUENCE_2 . store store
+unpack ::= UNPACK_SEQUENCE_2 store . store
+unpack ::= UNPACK_SEQUENCE_2 store store . 
+while1stmt ::= \e__come_froms . c_stmts COME_FROM JUMP_LOOP COME_FROM_LOOP
+while1stmt ::= \e__come_froms . c_stmts COME_FROM_LOOP
+while1stmt ::= \e__come_froms c_stmts . COME_FROM JUMP_LOOP COME_FROM_LOOP
+while1stmt ::= \e__come_froms c_stmts . COME_FROM_LOOP
+while1stmt ::= \e__come_froms c_stmts COME_FROM . JUMP_LOOP COME_FROM_LOOP
+while1stmt ::= _come_froms . c_stmts COME_FROM JUMP_LOOP COME_FROM_LOOP
+while1stmt ::= _come_froms . c_stmts COME_FROM_LOOP
+while1stmt ::= _come_froms c_stmts . COME_FROM JUMP_LOOP COME_FROM_LOOP
+while1stmt ::= _come_froms c_stmts . COME_FROM_LOOP
+while1stmt ::= _come_froms c_stmts COME_FROM . JUMP_LOOP COME_FROM_LOOP
+whileTruestmt ::= \e__come_froms . c_stmts JUMP_LOOP \e__come_froms POP_BLOCK
+whileTruestmt ::= \e__come_froms . c_stmts JUMP_LOOP _come_froms POP_BLOCK
+whileTruestmt ::= \e__come_froms c_stmts . JUMP_LOOP \e__come_froms POP_BLOCK
+whileTruestmt ::= \e__come_froms c_stmts . JUMP_LOOP _come_froms POP_BLOCK
+whileTruestmt ::= _come_froms . c_stmts JUMP_LOOP \e__come_froms POP_BLOCK
+whileTruestmt ::= _come_froms . c_stmts JUMP_LOOP _come_froms POP_BLOCK
+whileTruestmt ::= _come_froms c_stmts . JUMP_LOOP \e__come_froms POP_BLOCK
+whileTruestmt ::= _come_froms c_stmts . JUMP_LOOP _come_froms POP_BLOCK
+whileTruestmt38 ::= \e__come_froms . c_stmts JUMP_LOOP COME_FROM_EXCEPT_CLAUSE
+whileTruestmt38 ::= \e__come_froms . c_stmts JUMP_LOOP \e__come_froms
+whileTruestmt38 ::= \e__come_froms . c_stmts JUMP_LOOP _come_froms
+whileTruestmt38 ::= \e__come_froms c_stmts . JUMP_LOOP COME_FROM_EXCEPT_CLAUSE
+whileTruestmt38 ::= \e__come_froms c_stmts . JUMP_LOOP \e__come_froms
+whileTruestmt38 ::= \e__come_froms c_stmts . JUMP_LOOP _come_froms
+whileTruestmt38 ::= _come_froms . c_stmts JUMP_LOOP COME_FROM_EXCEPT_CLAUSE
+whileTruestmt38 ::= _come_froms . c_stmts JUMP_LOOP \e__come_froms
+whileTruestmt38 ::= _come_froms . c_stmts JUMP_LOOP _come_froms
+whileTruestmt38 ::= _come_froms c_stmts . JUMP_LOOP COME_FROM_EXCEPT_CLAUSE
+whileTruestmt38 ::= _come_froms c_stmts . JUMP_LOOP \e__come_froms
+whileTruestmt38 ::= _come_froms c_stmts . JUMP_LOOP _come_froms
+whilestmt38 ::= \e__come_froms . testexpr \e_c_stmts_opt COME_FROM JUMP_LOOP POP_BLOCK
+whilestmt38 ::= \e__come_froms . testexpr \e_c_stmts_opt JUMP_LOOP POP_BLOCK
+whilestmt38 ::= \e__come_froms . testexpr \e_c_stmts_opt JUMP_LOOP come_froms
+whilestmt38 ::= \e__come_froms . testexpr c_stmts JUMP_LOOP \e__come_froms
+whilestmt38 ::= \e__come_froms . testexpr c_stmts JUMP_LOOP _come_froms
+whilestmt38 ::= \e__come_froms . testexpr c_stmts come_froms
+whilestmt38 ::= \e__come_froms . testexpr c_stmts_opt COME_FROM JUMP_LOOP POP_BLOCK
+whilestmt38 ::= \e__come_froms . testexpr c_stmts_opt JUMP_LOOP POP_BLOCK
+whilestmt38 ::= \e__come_froms . testexpr c_stmts_opt JUMP_LOOP come_froms
+whilestmt38 ::= \e__come_froms . testexpr returns POP_BLOCK
+whilestmt38 ::= \e__come_froms testexpr . c_stmts JUMP_LOOP \e__come_froms
+whilestmt38 ::= \e__come_froms testexpr . c_stmts JUMP_LOOP _come_froms
+whilestmt38 ::= \e__come_froms testexpr . c_stmts come_froms
+whilestmt38 ::= \e__come_froms testexpr . c_stmts_opt COME_FROM JUMP_LOOP POP_BLOCK
+whilestmt38 ::= \e__come_froms testexpr . c_stmts_opt JUMP_LOOP POP_BLOCK
+whilestmt38 ::= \e__come_froms testexpr . c_stmts_opt JUMP_LOOP come_froms
+whilestmt38 ::= \e__come_froms testexpr . returns POP_BLOCK
+whilestmt38 ::= \e__come_froms testexpr \e_c_stmts_opt . COME_FROM JUMP_LOOP POP_BLOCK
+whilestmt38 ::= \e__come_froms testexpr \e_c_stmts_opt . JUMP_LOOP POP_BLOCK
+whilestmt38 ::= \e__come_froms testexpr \e_c_stmts_opt . JUMP_LOOP come_froms
+whilestmt38 ::= \e__come_froms testexpr \e_c_stmts_opt COME_FROM . JUMP_LOOP POP_BLOCK
+whilestmt38 ::= \e__come_froms testexpr c_stmts . JUMP_LOOP \e__come_froms
+whilestmt38 ::= \e__come_froms testexpr c_stmts . JUMP_LOOP _come_froms
+whilestmt38 ::= \e__come_froms testexpr c_stmts . come_froms
+whilestmt38 ::= \e__come_froms testexpr c_stmts come_froms . 
+whilestmt38 ::= \e__come_froms testexpr c_stmts_opt . COME_FROM JUMP_LOOP POP_BLOCK
+whilestmt38 ::= \e__come_froms testexpr c_stmts_opt . JUMP_LOOP POP_BLOCK
+whilestmt38 ::= \e__come_froms testexpr c_stmts_opt . JUMP_LOOP come_froms
+whilestmt38 ::= \e__come_froms testexpr c_stmts_opt COME_FROM . JUMP_LOOP POP_BLOCK
+whilestmt38 ::= _come_froms . testexpr \e_c_stmts_opt COME_FROM JUMP_LOOP POP_BLOCK
+whilestmt38 ::= _come_froms . testexpr \e_c_stmts_opt JUMP_LOOP POP_BLOCK
+whilestmt38 ::= _come_froms . testexpr \e_c_stmts_opt JUMP_LOOP come_froms
+whilestmt38 ::= _come_froms . testexpr c_stmts JUMP_LOOP \e__come_froms
+whilestmt38 ::= _come_froms . testexpr c_stmts JUMP_LOOP _come_froms
+whilestmt38 ::= _come_froms . testexpr c_stmts come_froms
+whilestmt38 ::= _come_froms . testexpr c_stmts_opt COME_FROM JUMP_LOOP POP_BLOCK
+whilestmt38 ::= _come_froms . testexpr c_stmts_opt JUMP_LOOP POP_BLOCK
+whilestmt38 ::= _come_froms . testexpr c_stmts_opt JUMP_LOOP come_froms
+whilestmt38 ::= _come_froms . testexpr returns POP_BLOCK
+whilestmt38 ::= _come_froms testexpr . c_stmts JUMP_LOOP \e__come_froms
+whilestmt38 ::= _come_froms testexpr . c_stmts JUMP_LOOP _come_froms
+whilestmt38 ::= _come_froms testexpr . c_stmts come_froms
+whilestmt38 ::= _come_froms testexpr . c_stmts_opt COME_FROM JUMP_LOOP POP_BLOCK
+whilestmt38 ::= _come_froms testexpr . c_stmts_opt JUMP_LOOP POP_BLOCK
+whilestmt38 ::= _come_froms testexpr . c_stmts_opt JUMP_LOOP come_froms
+whilestmt38 ::= _come_froms testexpr . returns POP_BLOCK
+whilestmt38 ::= _come_froms testexpr \e_c_stmts_opt . COME_FROM JUMP_LOOP POP_BLOCK
+whilestmt38 ::= _come_froms testexpr \e_c_stmts_opt . JUMP_LOOP POP_BLOCK
+whilestmt38 ::= _come_froms testexpr \e_c_stmts_opt . JUMP_LOOP come_froms
+whilestmt38 ::= _come_froms testexpr c_stmts . JUMP_LOOP \e__come_froms
+whilestmt38 ::= _come_froms testexpr c_stmts . JUMP_LOOP _come_froms
+whilestmt38 ::= _come_froms testexpr c_stmts . come_froms
+whilestmt38 ::= _come_froms testexpr c_stmts come_froms . 
+whilestmt38 ::= _come_froms testexpr c_stmts_opt . COME_FROM JUMP_LOOP POP_BLOCK
+whilestmt38 ::= _come_froms testexpr c_stmts_opt . JUMP_LOOP POP_BLOCK
+whilestmt38 ::= _come_froms testexpr c_stmts_opt . JUMP_LOOP come_froms
+whilestmt38 ::= _come_froms testexpr c_stmts_opt COME_FROM . JUMP_LOOP POP_BLOCK
+yield ::= expr . YIELD_VALUE
+yield_from ::= expr . GET_YIELD_FROM_ITER LOAD_CONST YIELD_FROM
+Instruction context:
+   
+ L. 871      1596  POP_BLOCK        
+->          1598_1600  JUMP_LOOP          1512  'to 1512'
+              1602_0  COME_FROM          1540  '1540'
+
+################################################################
+
+L.   2       0_2  SETUP_FINALLY       544  'to 544'
+
+ L.   3         4  LOAD_CONST               0
+                6  LOAD_CONST               ('exit',)
+                8  IMPORT_NAME              sys
+               10  IMPORT_FROM              exit
+               12  STORE_NAME               exit
+               14  POP_TOP
+
+ L.   4        16  LOAD_NAME                __name__
+               18  LOAD_STR                 '__main__'
+               20  COMPARE_OP               !=
+               22  POP_JUMP_IF_FALSE    30  'to 30'
+
+ L.   4        24  LOAD_NAME                exit
+               26  CALL_FUNCTION_0       0  ''
+               28  POP_TOP
+             30_0  COME_FROM            22  '22'
+
+ L.   5        30  LOAD_CONST               0
+               32  LOAD_CONST               ('name', 'getpid', 'kill')
+               34  IMPORT_NAME              os
+               36  IMPORT_FROM              name
+               38  STORE_NAME               name
+               40  IMPORT_FROM              getpid
+               42  STORE_NAME               getpid
+               44  IMPORT_FROM              kill
+               46  STORE_NAME               kill
+               48  POP_TOP
+
+ L.   6        50  LOAD_NAME                name
+               52  LOAD_STR                 'nt'
+               54  COMPARE_OP               !=
+               56  POP_JUMP_IF_FALSE    78  'to 78'
+
+ L.   6        58  LOAD_NAME                print
+               60  LOAD_STR                 '>> This program only support Windows!'
+               62  CALL_FUNCTION_1       1  ''
+               64  POP_TOP
+
+ L.   6        66  LOAD_NAME                input
+               68  CALL_FUNCTION_0       0  ''
+               70  POP_TOP
+
+ L.   6        72  LOAD_NAME                exit
+               74  CALL_FUNCTION_0       0  ''
+               76  POP_TOP
+             78_0  COME_FROM            56  '56'
+
+ L.   7        78  LOAD_CONST               0
+               80  LOAD_CONST               None
+               82  IMPORT_NAME              signal
+               84  STORE_NAME               signal
+
+ L.   8        86  LOAD_NAME                getpid
+               88  CALL_FUNCTION_0       0  ''
+               90  LOAD_NAME                globals
+               92  CALL_FUNCTION_0       0  ''
+               94  LOAD_STR                 'pid'
+               96  STORE_SUBSCR
+
+ L.   9        98  LOAD_CODE                <code_object kill_process>
+              100  LOAD_STR                 'kill_process'
+              102  MAKE_FUNCTION_0          'Neither defaults, keyword-only args, annotations, nor closures'
+              104  STORE_NAME               kill_process
+
+ L.  14       106  LOAD_CODE                <code_object is_admin>
+              108  LOAD_STR                 'is_admin'
+              110  MAKE_FUNCTION_0          'Neither defaults, keyword-only args, annotations, nor closures'
+              112  STORE_NAME               is_admin
+
+ L.  19       114  LOAD_CONST               0
+              116  LOAD_CONST               ('windll',)
+              118  IMPORT_NAME              ctypes
+              120  IMPORT_FROM              windll
+              122  STORE_NAME               windll
+              124  POP_TOP
+
+ L.  20       126  LOAD_CONST               0
+              128  LOAD_CONST               ('argv', 'executable', 'stdout')
+              130  IMPORT_NAME              sys
+              132  IMPORT_FROM              argv
+              134  STORE_NAME               argv
+              136  IMPORT_FROM              executable
+              138  STORE_NAME               executable
+              140  IMPORT_FROM              stdout
+              142  STORE_NAME               stdout
+              144  POP_TOP
+
+ L.  21       146  LOAD_NAME                is_admin
+              148  CALL_FUNCTION_0       0  ''
+              150  POP_JUMP_IF_TRUE    186  'to 186'
+
+ L.  22       152  LOAD_NAME                windll
+              154  LOAD_ATTR                shell32
+              156  LOAD_METHOD              ShellExecuteW
+              158  LOAD_CONST               None
+              160  LOAD_STR                 'runas'
+              162  LOAD_NAME                executable
+              164  LOAD_STR                 ' '
+              166  LOAD_METHOD              join
+              168  LOAD_NAME                argv
+              170  CALL_METHOD_1         1  ''
+              172  LOAD_CONST               None
+              174  LOAD_CONST               1
+              176  CALL_METHOD_6         6  ''
+              178  POP_TOP
+
+ L.  23       180  LOAD_NAME                kill_process
+              182  CALL_FUNCTION_0       0  ''
+              184  POP_TOP
+            186_0  COME_FROM           150  '150'
+
+ L.  24       186  SETUP_FINALLY       246  'to 246'
+
+ L.  25       188  LOAD_NAME                argv
+              190  LOAD_CONST               0
+              192  BINARY_SUBSCR
+              194  LOAD_NAME                argv
+              196  LOAD_CONST               1
+              198  BINARY_SUBSCR
+              200  COMPARE_OP               ==
+              202  POP_JUMP_IF_FALSE   212  'to 212'
+
+ L.  25       204  LOAD_NAME                argv
+              206  LOAD_CONST               1
+              208  DELETE_SUBSCR
+              210  JUMP_FORWARD        242  'to 242'
+            212_0  COME_FROM           202  '202'
+
+ L.  26       212  LOAD_NAME                argv
+              214  LOAD_CONST               0
+              216  BINARY_SUBSCR
+              218  LOAD_NAME                argv
+              220  LOAD_CONST               1
+              222  LOAD_CONST               None
+              224  BUILD_SLICE_2         2
+              226  BINARY_SUBSCR
+              228  COMPARE_OP               ==
+              230  POP_JUMP_IF_FALSE   242  'to 242'
+
+ L.  26       232  LOAD_NAME                argv
+              234  LOAD_CONST               1
+              236  LOAD_CONST               None
+              238  BUILD_SLICE_2         2
+              240  DELETE_SUBSCR
+            242_0  COME_FROM           230  '230'
+            242_1  COME_FROM           210  '210'
+              242  POP_BLOCK
+              244  JUMP_FORWARD        268  'to 268'
+            246_0  COME_FROM_FINALLY   186  '186'
+
+ L.  27       246  DUP_TOP
+              248  LOAD_NAME                IndexError
+              250  COMPARE_OP               exception-match
+          252_254  POP_JUMP_IF_FALSE   266  'to 266'
+              256  POP_TOP
+              258  POP_TOP
+              260  POP_TOP
+
+ L.  28       262  POP_EXCEPT
+              264  JUMP_FORWARD        268  'to 268'
+            266_0  COME_FROM           252  '252'
+              266  END_FINALLY
+            268_0  COME_FROM           264  '264'
+            268_1  COME_FROM           244  '244'
+
+ L.  29       268  LOAD_CONST               0
+              270  LOAD_CONST               None
+              272  IMPORT_NAME              socket
+              274  STORE_NAME               socket
+              276  LOAD_CONST               0
+              278  LOAD_CONST               None
+              280  IMPORT_NAME              zipfile
+              282  STORE_NAME               zipfile
+              284  LOAD_CONST               0
+              286  LOAD_CONST               None
+              288  IMPORT_NAME              chardet
+              290  STORE_NAME               chardet
+
+ L.  30       292  LOAD_CONST               0
+              294  LOAD_CONST               ('getcwd', 'system', 'path', 'remove', 'mkdir', 'environ', 'listdir', 'chdir', 'stat')
+              296  IMPORT_NAME              os
+              298  IMPORT_FROM              getcwd
+              300  STORE_NAME               getcwd
+              302  IMPORT_FROM              system
+              304  STORE_NAME               system
+              306  IMPORT_FROM              path
+              308  STORE_NAME               path
+              310  IMPORT_FROM              remove
+              312  STORE_NAME               remove
+              314  IMPORT_FROM              mkdir
+              316  STORE_NAME               mkdir
+              318  IMPORT_FROM              environ
+              320  STORE_NAME               environ
+              322  IMPORT_FROM              listdir
+              324  STORE_NAME               listdir
+              326  IMPORT_FROM              chdir
+              328  STORE_NAME               chdir
+              330  IMPORT_FROM              stat
+              332  STORE_NAME               stat
+              334  POP_TOP
+
+ L.  31       336  LOAD_CONST               0
+              338  LOAD_CONST               ('Path',)
+              340  IMPORT_NAME              pathlib
+              342  IMPORT_FROM              Path
+              344  STORE_NAME               Path
+              346  POP_TOP
+
+ L.  32       348  LOAD_CONST               0
+              350  LOAD_CONST               ('dumps',)
+              352  IMPORT_NAME              marshal
+              354  IMPORT_FROM              dumps
+              356  STORE_NAME               dumps
+              358  POP_TOP
+
+ L.  33       360  LOAD_CONST               0
+              362  LOAD_CONST               ('loads',)
+              364  IMPORT_NAME              marshal
+              366  IMPORT_FROM              loads
+              368  STORE_NAME               marshal_loads
+              370  POP_TOP
+
+ L.  34       372  LOAD_CONST               0
+              374  LOAD_CONST               ('b64encode',)
+              376  IMPORT_NAME              base64
+              378  IMPORT_FROM              b64encode
+              380  STORE_NAME               b64encode
+              382  POP_TOP
+
+ L.  35       384  LOAD_CONST               0
+              386  LOAD_CONST               ('randrange', 'choice')
+              388  IMPORT_NAME              random
+              390  IMPORT_FROM              randrange
+              392  STORE_NAME               randrange
+              394  IMPORT_FROM              choice
+              396  STORE_NAME               choice
+              398  POP_TOP
+
+ L.  36       400  LOAD_CONST               0
+              402  LOAD_CONST               ('getoutput',)
+              404  IMPORT_NAME              subprocess
+              406  IMPORT_FROM              getoutput
+              408  STORE_NAME               getoutput
+              410  POP_TOP
+
+ L.  37       412  LOAD_CONST               0
+              414  LOAD_CONST               ('rmtree', 'copyfile', 'make_archive', 'copytree')
+              416  IMPORT_NAME              shutil
+              418  IMPORT_FROM              rmtree
+              420  STORE_NAME               rmtree
+              422  IMPORT_FROM              copyfile
+              424  STORE_NAME               copyfile
+              426  IMPORT_FROM              make_archive
+              428  STORE_NAME               make_archive
+              430  IMPORT_FROM              copytree
+              432  STORE_NAME               copytree
+              434  POP_TOP
+
+ L.  38       436  LOAD_CONST               0
+              438  LOAD_CONST               ('compress',)
+              440  IMPORT_NAME              zlib
+              442  IMPORT_FROM              compress
+              444  STORE_NAME               compress
+              446  POP_TOP
+
+ L.  39       448  LOAD_CONST               0
+              450  LOAD_CONST               ('Path',)
+              452  IMPORT_NAME              pathlib
+              454  IMPORT_FROM              Path
+              456  STORE_NAME               Path
+              458  POP_TOP
+
+ L.  40       460  LOAD_CONST               0
+              462  LOAD_CONST               ('Thread',)
+              464  IMPORT_NAME              threading
+              466  IMPORT_FROM              Thread
+              468  STORE_NAME               Thread
+              470  POP_TOP
+
+ L.  41       472  LOAD_CONST               0
+              474  LOAD_CONST               ('sleep',)
+              476  IMPORT_NAME              time
+              478  IMPORT_FROM              sleep
+              480  STORE_NAME               sleep
+              482  POP_TOP
+
+ L.  42       484  LOAD_CONST               0
+              486  LOAD_CONST               ('datetime',)
+              488  IMPORT_NAME              datetime
+              490  IMPORT_FROM              datetime
+              492  STORE_NAME               datetime
+              494  POP_TOP
+
+ L.  43       496  LOAD_CONST               0
+              498  LOAD_CONST               ('*',)
+              500  IMPORT_NAME              config
+              502  IMPORT_STAR
+
+ L.  44       504  LOAD_CONST               0
+              506  LOAD_CONST               ('sha512',)
+              508  IMPORT_NAME              hashlib
+              510  IMPORT_FROM              sha512
+              512  STORE_NAME               sha512
+              514  POP_TOP
+
+ L.  45       516  LOAD_CONST               0
+              518  LOAD_CONST               ('error',)
+              520  IMPORT_NAME              logging
+              522  IMPORT_FROM              error
+              524  STORE_NAME               error
+              526  POP_TOP
+
+ L.  46       528  LOAD_CONST               0
+              530  LOAD_CONST               ('format_exc',)
+              532  IMPORT_NAME              traceback
+              534  IMPORT_FROM              format_exc
+              536  STORE_NAME               format_exc
+              538  POP_TOP
+              540  POP_BLOCK
+              542  JUMP_FORWARD        622  'to 622'
+            544_0  COME_FROM_FINALLY     0  '0'
+
+ L.  47       544  DUP_TOP
+              546  LOAD_NAME                ImportError
+              548  COMPARE_OP               exception-match
+          550_552  POP_JUMP_IF_FALSE   604  'to 604'
+              554  POP_TOP
+              556  STORE_NAME               e
+              558  POP_TOP
+              560  SETUP_FINALLY       592  'to 592'
+
+ L.  48       562  LOAD_NAME                print
+              564  LOAD_STR                 '>> Cannot import library! {}'
+              566  LOAD_METHOD              format
+              568  LOAD_NAME                e
+              570  CALL_METHOD_1         1  ''
+              572  CALL_FUNCTION_1       1  ''
+              574  POP_TOP
+
+ L.  48       576  LOAD_NAME                input
+              578  CALL_FUNCTION_0       0  ''
+              580  POP_TOP
+
+ L.  48       582  LOAD_NAME                exit
+              584  CALL_FUNCTION_0       0  ''
+              586  POP_TOP
+              588  POP_BLOCK
+              590  BEGIN_FINALLY
+            592_0  COME_FROM_FINALLY   560  '560'
+              592  LOAD_CONST               None
+              594  STORE_NAME               e
+              596  DELETE_NAME              e
+              598  END_FINALLY
+              600  POP_EXCEPT
+              602  JUMP_FORWARD        622  'to 622'
+            604_0  COME_FROM           550  '550'
+
+ L.  49       604  POP_TOP
+              606  POP_TOP
+              608  POP_TOP
+
+ L.  50       610  LOAD_NAME                exit
+              612  CALL_FUNCTION_0       0  ''
+              614  POP_TOP
+              616  POP_EXCEPT
+              618  JUMP_FORWARD        622  'to 622'
+              620  END_FINALLY
+            622_0  COME_FROM           618  '618'
+            622_1  COME_FROM           602  '602'
+            622_2  COME_FROM           542  '542'
+
+ L.  59       622  LOAD_CODE                <code_object encrypt_data>
+              624  LOAD_STR                 'encrypt_data'
+              626  MAKE_FUNCTION_0          'Neither defaults, keyword-only args, annotations, nor closures'
+              628  STORE_NAME               encrypt_data
+
+ L.  64       630  LOAD_CODE                <code_object decrypt_data>
+              632  LOAD_STR                 'decrypt_data'
+              634  MAKE_FUNCTION_0          'Neither defaults, keyword-only args, annotations, nor closures'
+              636  STORE_NAME               decrypt_data
+
+ L.  70       638  LOAD_NAME                str
+              640  LOAD_NAME                getcwd
+              642  CALL_FUNCTION_0       0  ''
+              644  CALL_FUNCTION_1       1  ''
+              646  STORE_GLOBAL             sys_path
+
+ L.  71       648  LOAD_CODE                <code_object title_cmd>
+              650  LOAD_STR                 'title_cmd'
+              652  MAKE_FUNCTION_0          'Neither defaults, keyword-only args, annotations, nor closures'
+              654  STORE_NAME               title_cmd
+
+ L.  73       656  LOAD_CODE                <code_object pause>
+              658  LOAD_STR                 'pause'
+              660  MAKE_FUNCTION_0          'Neither defaults, keyword-only args, annotations, nor closures'
+              662  STORE_NAME               pause
+
+ L.  76       664  LOAD_CODE                <code_object program_err>
+              666  LOAD_STR                 'program_err'
+              668  MAKE_FUNCTION_0          'Neither defaults, keyword-only args, annotations, nor closures'
+              670  STORE_NAME               program_err
+
+ L.  80       672  LOAD_CODE                <code_object clear>
+              674  LOAD_STR                 'clear'
+              676  MAKE_FUNCTION_0          'Neither defaults, keyword-only args, annotations, nor closures'
+              678  STORE_NAME               clear
+
+ L.  82       680  LOAD_CODE                <code_object color>
+              682  LOAD_STR                 'color'
+              684  MAKE_FUNCTION_0          'Neither defaults, keyword-only args, annotations, nor closures'
+              686  STORE_NAME               color
+
+ L.  84       688  LOAD_CODE                <code_object time_now>
+              690  LOAD_STR                 'time_now'
+              692  MAKE_FUNCTION_0          'Neither defaults, keyword-only args, annotations, nor closures'
+              694  STORE_NAME               time_now
+
+ L.  86       696  LOAD_CODE                <code_object cleanup>
+              698  LOAD_STR                 'cleanup'
+              700  MAKE_FUNCTION_0          'Neither defaults, keyword-only args, annotations, nor closures'
+              702  STORE_NAME               cleanup
+
+ L.  95       704  LOAD_CODE                <code_object title_cmd>
+              706  LOAD_STR                 'title_cmd'
+              708  MAKE_FUNCTION_0          'Neither defaults, keyword-only args, annotations, nor closures'
+              710  STORE_NAME               title_cmd
+
+ L.  97       712  LOAD_CONST               b'\n\r\t\x0c\x08'
+              714  STORE_NAME               _control_chars
+
+ L.  98       716  LOAD_NAME                bytes
+              718  LOAD_NAME                str
+              720  COMPARE_OP               is
+          722_724  POP_JUMP_IF_FALSE   776  'to 776'
+
+ L.  99       726  LOAD_NAME                _control_chars
+              728  LOAD_CONST               b''
+              730  LOAD_METHOD              join
+              732  LOAD_NAME                map
+              734  LOAD_NAME                chr
+              736  LOAD_NAME                range
+              738  LOAD_CONST               32
+              740  LOAD_CONST               127
+              742  CALL_FUNCTION_2       2  ''
+              744  CALL_FUNCTION_2       2  ''
+              746  CALL_METHOD_1         1  ''
+              748  BINARY_ADD
+              750  STORE_NAME               _printable_ascii
+
+ L. 100       752  LOAD_CONST               b''
+              754  LOAD_METHOD              join
+              756  LOAD_NAME                map
+              758  LOAD_NAME                chr
+              760  LOAD_NAME                range
+              762  LOAD_CONST               127
+              764  LOAD_CONST               256
+              766  CALL_FUNCTION_2       2  ''
+              768  CALL_FUNCTION_2       2  ''
+              770  CALL_METHOD_1         1  ''
+              772  STORE_NAME               _printable_high_ascii
+              774  JUMP_FORWARD        808  'to 808'
+            776_0  COME_FROM           722  '722'
+
+ L. 102       776  LOAD_NAME                _control_chars
+              778  LOAD_NAME                bytes
+              780  LOAD_NAME                range
+              782  LOAD_CONST               32
+              784  LOAD_CONST               127
+              786  CALL_FUNCTION_2       2  ''
+              788  CALL_FUNCTION_1       1  ''
+              790  BINARY_ADD
+              792  STORE_NAME               _printable_ascii
+
+ L. 103       794  LOAD_NAME                bytes
+              796  LOAD_NAME                range
+              798  LOAD_CONST               127
+              800  LOAD_CONST               256
+              802  CALL_FUNCTION_2       2  ''
+              804  CALL_FUNCTION_1       1  ''
+              806  STORE_NAME               _printable_high_ascii
+            808_0  COME_FROM           774  '774'
+
+ L. 104       808  LOAD_CONST               (1024,)
+              810  LOAD_CODE                <code_object get_starting_chunk>
+              812  LOAD_STR                 'get_starting_chunk'
+              814  MAKE_FUNCTION_1          'default'
+              816  STORE_NAME               get_starting_chunk
+
+ L. 111       818  LOAD_CONST               (6,)
+              820  LOAD_CODE                <code_object random_str>
+              822  LOAD_STR                 'random_str'
+              824  MAKE_FUNCTION_1          'default'
+              826  STORE_NAME               random_str
+
+ L. 113       828  LOAD_CODE                <code_object is_binary_string>
+              830  LOAD_STR                 'is_binary_string'
+              832  MAKE_FUNCTION_0          'Neither defaults, keyword-only args, annotations, nor closures'
+              834  STORE_NAME               is_binary_string
+
+ L. 148       836  LOAD_CODE                <code_object is_binary>
+              838  LOAD_STR                 'is_binary'
+              840  MAKE_FUNCTION_0          'Neither defaults, keyword-only args, annotations, nor closures'
+              842  STORE_NAME               is_binary
+
+ L. 155       844  LOAD_CODE                <code_object check_file>
+              846  LOAD_STR                 'check_file'
+              848  MAKE_FUNCTION_0          'Neither defaults, keyword-only args, annotations, nor closures'
+              850  STORE_NAME               check_file
+
+ L. 167       852  LOAD_CODE                <code_object main_program>
+              854  LOAD_STR                 'main_program'
+              856  MAKE_FUNCTION_0          'Neither defaults, keyword-only args, annotations, nor closures'
+              858  STORE_NAME               main_program
+
+ L. 505       860  LOAD_CODE                <code_object get_file>
+              862  LOAD_STR                 'get_file'
+              864  MAKE_FUNCTION_0          'Neither defaults, keyword-only args, annotations, nor closures'
+              866  STORE_NAME               get_file
+
+ L. 730       868  LOAD_CODE                <code_object not_multi>
+              870  LOAD_STR                 'not_multi'
+              872  MAKE_FUNCTION_0          'Neither defaults, keyword-only args, annotations, nor closures'
+              874  STORE_NAME               not_multi
+
+ L. 766       876  LOAD_CODE                <code_object process_not_multi>
+              878  LOAD_STR                 'process_not_multi'
+              880  MAKE_FUNCTION_0          'Neither defaults, keyword-only args, annotations, nor closures'
+              882  STORE_NAME               process_not_multi
+
+ L. 792       884  LOAD_CODE                <code_object r_multi>
+              886  LOAD_STR                 'r_multi'
+              888  MAKE_FUNCTION_0          'Neither defaults, keyword-only args, annotations, nor closures'
+              890  STORE_NAME               r_multi
+
+ L. 802       892  LOAD_CODE                <code_object send_full>
+              894  LOAD_STR                 'send_full'
+              896  MAKE_FUNCTION_0          'Neither defaults, keyword-only args, annotations, nor closures'
+              898  STORE_NAME               send_full
+
+ L. 812   900_902  SETUP_FINALLY      1868  'to 1868'
+
+ L. 813       904  SETUP_FINALLY       924  'to 924'
+
+ L. 813       906  LOAD_NAME                chdir
+              908  LOAD_NAME                globals
+              910  CALL_FUNCTION_0       0  ''
+              912  LOAD_STR                 'sys_path'
+              914  BINARY_SUBSCR
+              916  CALL_FUNCTION_1       1  ''
+              918  POP_TOP
+              920  POP_BLOCK
+              922  JUMP_FORWARD        956  'to 956'
+            924_0  COME_FROM_FINALLY   904  '904'
+
+ L. 814       924  POP_TOP
+              926  POP_TOP
+              928  POP_TOP
+
+ L. 814       930  LOAD_NAME                print
+              932  LOAD_STR                 'Cannot change working directory path!'
+              934  CALL_FUNCTION_1       1  ''
+              936  POP_TOP
+
+ L. 814       938  LOAD_NAME                input
+              940  CALL_FUNCTION_0       0  ''
+              942  POP_TOP
+
+ L. 814       944  LOAD_NAME                kill_process
+              946  CALL_FUNCTION_0       0  ''
+              948  POP_TOP
+              950  POP_EXCEPT
+              952  JUMP_FORWARD        956  'to 956'
+              954  END_FINALLY
+            956_0  COME_FROM           952  '952'
+            956_1  COME_FROM           922  '922'
+
+ L. 815       956  LOAD_NAME                Path
+              958  LOAD_STR                 './{}'
+              960  LOAD_METHOD              format
+              962  LOAD_NAME                python_dll
+              964  CALL_METHOD_1         1  ''
+              966  CALL_FUNCTION_1       1  ''
+              968  LOAD_METHOD              is_file
+              970  CALL_METHOD_0         0  ''
+          972_974  POP_JUMP_IF_FALSE   982  'to 982'
+
+ L. 815       976  LOAD_STR                 ''
+              978  STORE_NAME               python_path
+              980  JUMP_FORWARD       1028  'to 1028'
+            982_0  COME_FROM           972  '972'
+
+ L. 816       982  LOAD_NAME                Path
+              984  LOAD_STR                 './python/{}'
+              986  LOAD_METHOD              format
+              988  LOAD_NAME                python_dll
+              990  CALL_METHOD_1         1  ''
+              992  CALL_FUNCTION_1       1  ''
+              994  LOAD_METHOD              is_file
+              996  CALL_METHOD_0         0  ''
+         998_1000  POP_JUMP_IF_FALSE  1008  'to 1008'
+
+ L. 816      1002  LOAD_STR                 'python'
+             1004  STORE_NAME               python_path
+             1006  JUMP_FORWARD       1028  'to 1028'
+           1008_0  COME_FROM           998  '998'
+
+ L. 817      1008  LOAD_NAME                print
+             1010  LOAD_STR                 '>> python folder not found!'
+             1012  CALL_FUNCTION_1       1  ''
+             1014  POP_TOP
+
+ L. 817      1016  LOAD_NAME                input
+             1018  CALL_FUNCTION_0       0  ''
+             1020  POP_TOP
+
+ L. 817      1022  LOAD_NAME                kill_process
+             1024  CALL_FUNCTION_0       0  ''
+             1026  POP_TOP
+           1028_0  COME_FROM          1006  '1006'
+           1028_1  COME_FROM           980  '980'
+
+ L. 818      1028  LOAD_NAME                Path
+             1030  LOAD_STR                 '{0}\\Programs\\Python\\{1}\\python.exe'
+             1032  LOAD_METHOD              format
+             1034  LOAD_NAME                environ
+             1036  LOAD_STR                 'LOCALAPPDATA'
+             1038  BINARY_SUBSCR
+             1040  LOAD_NAME                python_name
+             1042  CALL_METHOD_2         2  ''
+             1044  CALL_FUNCTION_1       1  ''
+             1046  LOAD_METHOD              is_file
+             1048  CALL_METHOD_0         0  ''
+         1050_1052  POP_JUMP_IF_TRUE   1080  'to 1080'
+
+ L. 818      1054  LOAD_NAME                print
+             1056  LOAD_STR                 'Please install {0}!'
+             1058  LOAD_METHOD              format
+             1060  LOAD_NAME                python_name
+             1062  CALL_METHOD_1         1  ''
+             1064  CALL_FUNCTION_1       1  ''
+             1066  POP_TOP
+
+ L. 818      1068  LOAD_NAME                input
+             1070  CALL_FUNCTION_0       0  ''
+             1072  POP_TOP
+
+ L. 818      1074  LOAD_NAME                kill_process
+             1076  CALL_FUNCTION_0       0  ''
+             1078  POP_TOP
+           1080_0  COME_FROM          1050  '1050'
+
+ L. 819      1080  LOAD_NAME                Path
+             1082  LOAD_STR                 '{0}\\Programs\\Python\\{1}\\Scripts\\cython.exe'
+             1084  LOAD_METHOD              format
+             1086  LOAD_NAME                environ
+             1088  LOAD_STR                 'LOCALAPPDATA'
+             1090  BINARY_SUBSCR
+             1092  LOAD_NAME                python_name
+             1094  CALL_METHOD_2         2  ''
+             1096  CALL_FUNCTION_1       1  ''
+             1098  LOAD_METHOD              is_file
+             1100  CALL_METHOD_0         0  ''
+         1102_1104  POP_JUMP_IF_TRUE   1166  'to 1166'
+
+ L. 820      1106  LOAD_NAME                print
+             1108  LOAD_STR                 'Installing cython....'
+             1110  CALL_FUNCTION_1       1  ''
+             1112  POP_TOP
+
+ L. 821      1114  LOAD_NAME                system
+             1116  LOAD_STR                 '{0}\\Programs\\Python\\{1}\\python.exe -m pip install cython >NUL 2>&1'
+             1118  LOAD_METHOD              format
+             1120  LOAD_NAME                environ
+             1122  LOAD_STR                 'LOCALAPPDATA'
+             1124  BINARY_SUBSCR
+             1126  LOAD_NAME                python_name
+             1128  CALL_METHOD_2         2  ''
+             1130  CALL_FUNCTION_1       1  ''
+             1132  LOAD_CONST               0
+             1134  COMPARE_OP               !=
+         1136_1138  POP_JUMP_IF_FALSE  1166  'to 1166'
+
+ L. 822      1140  LOAD_NAME                print
+             1142  LOAD_STR                 'Please install {0}! Using [pip install {0}]'
+             1144  LOAD_METHOD              format
+             1146  LOAD_STR                 'cython'
+             1148  CALL_METHOD_1         1  ''
+             1150  CALL_FUNCTION_1       1  ''
+             1152  POP_TOP
+
+ L. 823      1154  LOAD_NAME                input
+             1156  CALL_FUNCTION_0       0  ''
+             1158  POP_TOP
+
+ L. 824      1160  LOAD_NAME                kill_process
+             1162  CALL_FUNCTION_0       0  ''
+             1164  POP_TOP
+           1166_0  COME_FROM          1136  '1136'
+           1166_1  COME_FROM          1102  '1102'
+
+ L. 825      1166  LOAD_NAME                Path
+             1168  LOAD_STR                 '{0}\\Programs\\Python\\{1}\\Scripts\\pyinstaller.exe'
+             1170  LOAD_METHOD              format
+             1172  LOAD_NAME                environ
+             1174  LOAD_STR                 'LOCALAPPDATA'
+             1176  BINARY_SUBSCR
+             1178  LOAD_NAME                python_name
+             1180  CALL_METHOD_2         2  ''
+             1182  CALL_FUNCTION_1       1  ''
+             1184  LOAD_METHOD              is_file
+             1186  CALL_METHOD_0         0  ''
+         1188_1190  POP_JUMP_IF_TRUE   1252  'to 1252'
+
+ L. 826      1192  LOAD_NAME                print
+             1194  LOAD_STR                 'Installing pyinstaller....'
+             1196  CALL_FUNCTION_1       1  ''
+             1198  POP_TOP
+
+ L. 827      1200  LOAD_NAME                system
+             1202  LOAD_STR                 '{0}\\Programs\\Python\\{1}\\python.exe -m pip install pyinstaller >NUL 2>&1'
+             1204  LOAD_METHOD              format
+             1206  LOAD_NAME                environ
+             1208  LOAD_STR                 'LOCALAPPDATA'
+             1210  BINARY_SUBSCR
+             1212  LOAD_NAME                python_name
+             1214  CALL_METHOD_2         2  ''
+             1216  CALL_FUNCTION_1       1  ''
+             1218  LOAD_CONST               0
+             1220  COMPARE_OP               !=
+         1222_1224  POP_JUMP_IF_FALSE  1252  'to 1252'
+
+ L. 828      1226  LOAD_NAME                print
+             1228  LOAD_STR                 'Please install {0}! Using [pip install {0}]'
+             1230  LOAD_METHOD              format
+             1232  LOAD_STR                 'pyinstaller'
+             1234  CALL_METHOD_1         1  ''
+             1236  CALL_FUNCTION_1       1  ''
+             1238  POP_TOP
+
+ L. 829      1240  LOAD_NAME                input
+             1242  CALL_FUNCTION_0       0  ''
+             1244  POP_TOP
+
+ L. 830      1246  LOAD_NAME                kill_process
+             1248  CALL_FUNCTION_0       0  ''
+             1250  POP_TOP
+           1252_0  COME_FROM          1222  '1222'
+           1252_1  COME_FROM          1188  '1188'
+
+ L. 831      1252  LOAD_NAME                title_cmd
+             1254  CALL_FUNCTION_0       0  ''
+             1256  POP_TOP
+
+ L. 832      1258  LOAD_CODE                <code_object get_path_vs>
+             1260  LOAD_STR                 'get_path_vs'
+             1262  MAKE_FUNCTION_0          'Neither defaults, keyword-only args, annotations, nor closures'
+             1264  STORE_NAME               get_path_vs
+
+ L. 844      1266  LOAD_NAME                get_path_vs
+             1268  CALL_FUNCTION_0       0  ''
+             1270  UNPACK_SEQUENCE_2     2
+             1272  STORE_NAME               vcvarsall
+             1274  STORE_NAME               vspath
+
+ L. 845      1276  LOAD_NAME                vcvarsall
+             1278  LOAD_CONST               False
+             1280  COMPARE_OP               ==
+         1282_1284  POP_JUMP_IF_TRUE   1296  'to 1296'
+             1286  LOAD_NAME                vspath
+             1288  LOAD_CONST               False
+             1290  COMPARE_OP               ==
+         1292_1294  POP_JUMP_IF_FALSE  1320  'to 1320'
+           1296_0  COME_FROM          1282  '1282'
+
+ L. 846      1296  LOAD_NAME                input
+             1298  LOAD_STR                 '\n>> Visual Studio [Desktop development with C++] is not installed!\nPress Enter to open browser! '
+             1300  CALL_FUNCTION_1       1  ''
+             1302  POP_TOP
+
+ L. 847      1304  LOAD_NAME                system
+             1306  LOAD_STR                 'start "" "https://visualstudio.microsoft.com/fr/vs/"'
+             1308  CALL_FUNCTION_1       1  ''
+             1310  POP_TOP
+
+ L. 848      1312  LOAD_NAME                kill_process
+             1314  CALL_FUNCTION_0       0  ''
+             1316  POP_TOP
+             1318  JUMP_FORWARD       1364  'to 1364'
+           1320_0  COME_FROM          1292  '1292'
+
+ L. 850      1320  LOAD_NAME                arch
+             1322  LOAD_CONST               ('x86', 'x64', 'arm', 'arm64')
+             1324  COMPARE_OP               not-in
+         1326_1328  POP_JUMP_IF_FALSE  1350  'to 1350'
+
+ L. 850      1330  LOAD_NAME                print
+             1332  LOAD_STR                 '>> config: arch error!'
+             1334  CALL_FUNCTION_1       1  ''
+             1336  POP_TOP
+
+ L. 850      1338  LOAD_NAME                pause
+             1340  CALL_FUNCTION_0       0  ''
+             1342  POP_TOP
+
+ L. 850      1344  LOAD_NAME                kill_process
+             1346  CALL_FUNCTION_0       0  ''
+             1348  POP_TOP
+           1350_0  COME_FROM          1326  '1326'
+
+ L. 851      1350  LOAD_NAME                print
+             1352  LOAD_STR                 'vs_path: {}'
+             1354  LOAD_METHOD              format
+             1356  LOAD_NAME                vspath
+             1358  CALL_METHOD_1         1  ''
+             1360  CALL_FUNCTION_1       1  ''
+             1362  POP_TOP
+           1364_0  COME_FROM          1318  '1318'
+
+ L. 852      1364  LOAD_CONST               15
+             1366  STORE_NAME               min_char
+
+ L. 853      1368  LOAD_CONST               50
+             1370  STORE_NAME               max_char
+
+ L. 855      1372  BUILD_LIST_0          0
+             1374  STORE_GLOBAL             list_user
+
+ L. 856  1376_1378  SETUP_FINALLY      1766  'to 1766'
+
+ L. 857      1380  LOAD_NAME                print
+             1382  LOAD_STR                 'Listening on {}:{}....'
+             1384  LOAD_METHOD              format
+             1386  LOAD_NAME                str
+             1388  LOAD_NAME                host_server
+             1390  CALL_FUNCTION_1       1  ''
+             1392  LOAD_NAME                str
+             1394  LOAD_NAME                port_server
+             1396  CALL_FUNCTION_1       1  ''
+             1398  CALL_METHOD_2         2  ''
+             1400  CALL_FUNCTION_1       1  ''
+             1402  POP_TOP
+
+ L. 858      1404  LOAD_NAME                socket
+             1406  LOAD_METHOD              socket
+             1408  LOAD_NAME                socket
+             1410  LOAD_ATTR                AF_INET
+             1412  LOAD_NAME                socket
+             1414  LOAD_ATTR                SOCK_STREAM
+             1416  CALL_METHOD_2         2  ''
+             1418  STORE_NAME               soc
+
+ L. 859      1420  LOAD_NAME                soc
+             1422  LOAD_METHOD              bind
+             1424  LOAD_NAME                str
+             1426  LOAD_NAME                host_server
+             1428  CALL_FUNCTION_1       1  ''
+             1430  LOAD_NAME                int
+             1432  LOAD_NAME                port_server
+             1434  CALL_FUNCTION_1       1  ''
+             1436  BUILD_TUPLE_2         2
+             1438  CALL_METHOD_1         1  ''
+             1440  POP_TOP
+
+ L. 860      1442  LOAD_NAME                soc
+             1444  LOAD_METHOD              listen
+             1446  LOAD_CONST               25
+             1448  CALL_METHOD_1         1  ''
+             1450  POP_TOP
+
+ L. 861      1452  LOAD_NAME                is_multi
+             1454  LOAD_CONST               0
+             1456  COMPARE_OP               ==
+         1458_1460  POP_JUMP_IF_FALSE  1478  'to 1478'
+
+ L. 862      1462  LOAD_NAME                Thread
+             1464  LOAD_NAME                process_not_multi
+             1466  LOAD_CONST               ()
+             1468  LOAD_CONST               ('target', 'args')
+             1470  CALL_FUNCTION_KW_2     2  '2 total positional and keyword args'
+             1472  LOAD_METHOD              start
+             1474  CALL_METHOD_0         0  ''
+             1476  POP_TOP
+           1478_0  COME_FROM          1458  '1458'
+
+ L. 863      1478  LOAD_STR                 'f!{}'
+             1480  LOAD_METHOD              format
+             1482  LOAD_NAME                str
+             1484  LOAD_NAME                max_conn
+             1486  CALL_FUNCTION_1       1  ''
+             1488  CALL_METHOD_1         1  ''
+             1490  LOAD_METHOD              encode
+             1492  CALL_METHOD_0         0  ''
+             1494  STORE_NAME               var
+
+ L. 864      1496  LOAD_NAME                print
+             1498  LOAD_STR                 '[{}] Server started!'
+             1500  LOAD_METHOD              format
+             1502  LOAD_NAME                time_now
+             1504  CALL_FUNCTION_0       0  ''
+             1506  CALL_METHOD_1         1  ''
+             1508  CALL_FUNCTION_1       1  ''
+             1510  POP_TOP
+           1512_0  COME_FROM          1758  '1758'
+           1512_1  COME_FROM          1754  '1754'
+           1512_2  COME_FROM          1748  '1748'
+           1512_3  COME_FROM          1730  '1730'
+           1512_4  COME_FROM          1598  '1598'
+
+ L. 866      1512  LOAD_NAME                soc
+             1514  LOAD_METHOD              accept
+             1516  CALL_METHOD_0         0  ''
+             1518  UNPACK_SEQUENCE_2     2
+             1520  STORE_NAME               a
+             1522  STORE_NAME               b
+
+ L. 867      1524  SETUP_FINALLY      1732  'to 1732'
+
+ L. 868      1526  LOAD_NAME                len
+             1528  LOAD_GLOBAL              list_user
+             1530  CALL_FUNCTION_1       1  ''
+             1532  LOAD_NAME                int
+             1534  LOAD_NAME                max_conn
+             1536  CALL_FUNCTION_1       1  ''
+             1538  COMPARE_OP               >=
+         1540_1542  POP_JUMP_IF_FALSE  1602  'to 1602'
+
+ L. 869      1544  LOAD_NAME                Thread
+             1546  LOAD_NAME                send_full
+             1548  LOAD_NAME                a
+             1550  LOAD_NAME                var
+             1552  BUILD_TUPLE_2         2
+             1554  LOAD_CONST               ('target', 'args')
+             1556  CALL_FUNCTION_KW_2     2  '2 total positional and keyword args'
+             1558  LOAD_METHOD              start
+             1560  CALL_METHOD_0         0  ''
+             1562  POP_TOP
+
+ L. 870      1564  LOAD_NAME                print
+             1566  LOAD_STR                 'Full connection: {}:{}'
+             1568  LOAD_METHOD              format
+             1570  LOAD_NAME                str
+             1572  LOAD_NAME                b
+             1574  LOAD_CONST               0
+             1576  BINARY_SUBSCR
+             1578  CALL_FUNCTION_1       1  ''
+             1580  LOAD_NAME                str
+             1582  LOAD_NAME                b
+             1584  LOAD_CONST               1
+             1586  BINARY_SUBSCR
+             1588  CALL_FUNCTION_1       1  ''
+             1590  CALL_METHOD_2         2  ''
+             1592  CALL_FUNCTION_1       1  ''
+             1594  POP_TOP
+
+ L. 871      1596  POP_BLOCK
+         1598_1600  JUMP_LOOP          1512  'to 1512'
+           1602_0  COME_FROM          1540  '1540'
+
+ L. 872      1602  LOAD_NAME                print
+             1604  LOAD_STR                 '[{}] Accept: {}:{}'
+             1606  LOAD_METHOD              format
+             1608  LOAD_NAME                time_now
+             1610  CALL_FUNCTION_0       0  ''
+             1612  LOAD_NAME                str
+             1614  LOAD_NAME                b
+             1616  LOAD_CONST               0
+             1618  BINARY_SUBSCR
+             1620  CALL_FUNCTION_1       1  ''
+             1622  LOAD_NAME                str
+             1624  LOAD_NAME                b
+             1626  LOAD_CONST               1
+             1628  BINARY_SUBSCR
+             1630  CALL_FUNCTION_1       1  ''
+             1632  CALL_METHOD_3         3  ''
+             1634  CALL_FUNCTION_1       1  ''
+             1636  POP_TOP
+
+ L. 873      1638  LOAD_NAME                a
+             1640  LOAD_METHOD              settimeout
+             1642  LOAD_CONST               5.0
+             1644  CALL_METHOD_1         1  ''
+             1646  POP_TOP
+
+ L. 874      1648  LOAD_NAME                is_multi
+             1650  LOAD_CONST               1
+             1652  COMPARE_OP               ==
+         1654_1656  POP_JUMP_IF_FALSE  1694  'to 1694'
+
+ L. 875      1658  LOAD_NAME                a
+             1660  LOAD_METHOD              send
+             1662  LOAD_NAME                encrypt_data
+             1664  LOAD_CONST               b'now!'
+             1666  CALL_FUNCTION_1       1  ''
+             1668  CALL_METHOD_1         1  ''
+             1670  POP_TOP
+
+ L. 876      1672  LOAD_NAME                Thread
+             1674  LOAD_NAME                r_multi
+             1676  LOAD_NAME                a
+             1678  LOAD_NAME                b
+             1680  BUILD_TUPLE_2         2
+             1682  LOAD_CONST               ('target', 'args')
+             1684  CALL_FUNCTION_KW_2     2  '2 total positional and keyword args'
+             1686  LOAD_METHOD              start
+             1688  CALL_METHOD_0         0  ''
+             1690  POP_TOP
+             1692  JUMP_FORWARD       1728  'to 1728'
+           1694_0  COME_FROM          1654  '1654'
+
+ L. 878      1694  LOAD_NAME                a
+             1696  LOAD_METHOD              send
+             1698  LOAD_NAME                encrypt_data
+             1700  LOAD_CONST               b'wait'
+             1702  CALL_FUNCTION_1       1  ''
+             1704  CALL_METHOD_1         1  ''
+             1706  POP_TOP
+
+ L. 879      1708  LOAD_NAME                Thread
+             1710  LOAD_NAME                not_multi
+             1712  LOAD_NAME                a
+             1714  LOAD_NAME                b
+             1716  BUILD_TUPLE_2         2
+             1718  LOAD_CONST               ('target', 'args')
+             1720  CALL_FUNCTION_KW_2     2  '2 total positional and keyword args'
+             1722  LOAD_METHOD              start
+             1724  CALL_METHOD_0         0  ''
+             1726  POP_TOP
+           1728_0  COME_FROM          1692  '1692'
+             1728  POP_BLOCK
+             1730  JUMP_LOOP          1512  'to 1512'
+           1732_0  COME_FROM_FINALLY  1524  '1524'
+
+ L. 880      1732  POP_TOP
+             1734  POP_TOP
+             1736  POP_TOP
+
+ L. 881      1738  LOAD_NAME                a
+             1740  LOAD_METHOD              close
+             1742  CALL_METHOD_0         0  ''
+             1744  POP_TOP
+
+ L. 882      1746  POP_EXCEPT
+         1748_1750  JUMP_LOOP          1512  'to 1512'
+             1752  POP_EXCEPT
+             1754  JUMP_LOOP          1512  'to 1512'
+             1756  END_FINALLY
+         1758_1760  JUMP_LOOP          1512  'to 1512'
+             1762  POP_BLOCK
+             1764  JUMP_FORWARD       1858  'to 1858'
+           1766_0  COME_FROM_FINALLY  1376  '1376'
+
+ L. 883      1766  DUP_TOP
+             1768  LOAD_NAME                PermissionError
+             1770  COMPARE_OP               exception-match
+         1772_1774  POP_JUMP_IF_FALSE  1802  'to 1802'
+             1776  POP_TOP
+             1778  POP_TOP
+             1780  POP_TOP
+
+ L. 884      1782  LOAD_NAME                print
+             1784  LOAD_STR                 'ERROR: Port '
+             1786  LOAD_NAME                port_server
+             1788  FORMAT_VALUE          0  ''
+             1790  LOAD_STR                 ' cannot be listen! Need administrator permission!!'
+             1792  BUILD_STRING_3        3
+             1794  CALL_FUNCTION_1       1  ''
+             1796  POP_TOP
+             1798  POP_EXCEPT
+             1800  JUMP_FORWARD       1858  'to 1858'
+           1802_0  COME_FROM          1772  '1772'
+
+ L. 885      1802  DUP_TOP
+             1804  LOAD_NAME                OSError
+             1806  COMPARE_OP               exception-match
+         1808_1810  POP_JUMP_IF_FALSE  1856  'to 1856'
+             1812  POP_TOP
+             1814  STORE_NAME               e
+             1816  POP_TOP
+             1818  SETUP_FINALLY      1844  'to 1844'
+
+ L. 886      1820  LOAD_NAME                print
+             1822  LOAD_STR                 'ERROR: Port '
+             1824  LOAD_NAME                port_server
+             1826  FORMAT_VALUE          0  ''
+             1828  LOAD_STR                 ' | '
+             1830  LOAD_NAME                e
+             1832  FORMAT_VALUE          0  ''
+             1834  BUILD_STRING_4        4
+             1836  CALL_FUNCTION_1       1  ''
+             1838  POP_TOP
+             1840  POP_BLOCK
+             1842  BEGIN_FINALLY
+           1844_0  COME_FROM_FINALLY  1818  '1818'
+             1844  LOAD_CONST               None
+             1846  STORE_NAME               e
+             1848  DELETE_NAME              e
+             1850  END_FINALLY
+             1852  POP_EXCEPT
+             1854  JUMP_FORWARD       1858  'to 1858'
+           1856_0  COME_FROM          1808  '1808'
+             1856  END_FINALLY
+           1858_0  COME_FROM          1854  '1854'
+           1858_1  COME_FROM          1800  '1800'
+           1858_2  COME_FROM          1764  '1764'
+
+ L. 887      1858  LOAD_NAME                input
+             1860  CALL_FUNCTION_0       0  ''
+             1862  POP_TOP
+             1864  POP_BLOCK
+             1866  JUMP_FORWARD       2040  'to 2040'
+           1868_0  COME_FROM_FINALLY   900  '900'
+
+ L. 888      1868  DUP_TOP
+             1870  LOAD_NAME                IndexError
+             1872  COMPARE_OP               exception-match
+         1874_1876  POP_JUMP_IF_FALSE  1910  'to 1910'
+             1878  POP_TOP
+             1880  STORE_NAME               e
+             1882  POP_TOP
+             1884  SETUP_FINALLY      1898  'to 1898'
+
+ L. 889      1886  LOAD_NAME                program_err
+             1888  LOAD_NAME                e
+             1890  CALL_FUNCTION_1       1  ''
+             1892  POP_TOP
+             1894  POP_BLOCK
+             1896  BEGIN_FINALLY
+           1898_0  COME_FROM_FINALLY  1884  '1884'
+             1898  LOAD_CONST               None
+             1900  STORE_NAME               e
+             1902  DELETE_NAME              e
+             1904  END_FINALLY
+             1906  POP_EXCEPT
+             1908  JUMP_FORWARD       2040  'to 2040'
+           1910_0  COME_FROM          1874  '1874'
+
+ L. 890      1910  DUP_TOP
+             1912  LOAD_NAME                ValueError
+             1914  COMPARE_OP               exception-match
+         1916_1918  POP_JUMP_IF_FALSE  1952  'to 1952'
+             1920  POP_TOP
+             1922  STORE_NAME               e
+             1924  POP_TOP
+             1926  SETUP_FINALLY      1940  'to 1940'
+
+ L. 891      1928  LOAD_NAME                program_err
+             1930  LOAD_NAME                e
+             1932  CALL_FUNCTION_1       1  ''
+             1934  POP_TOP
+             1936  POP_BLOCK
+             1938  BEGIN_FINALLY
+           1940_0  COME_FROM_FINALLY  1926  '1926'
+             1940  LOAD_CONST               None
+             1942  STORE_NAME               e
+             1944  DELETE_NAME              e
+             1946  END_FINALLY
+             1948  POP_EXCEPT
+             1950  JUMP_FORWARD       2040  'to 2040'
+           1952_0  COME_FROM          1916  '1916'
+
+ L. 892      1952  DUP_TOP
+             1954  LOAD_NAME                OSError
+             1956  COMPARE_OP               exception-match
+         1958_1960  POP_JUMP_IF_FALSE  2012  'to 2012'
+             1962  POP_TOP
+             1964  STORE_NAME               e
+             1966  POP_TOP
+             1968  SETUP_FINALLY      2000  'to 2000'
+
+ L. 893      1970  LOAD_NAME                print
+             1972  LOAD_STR                 'variable error! {}'
+             1974  LOAD_METHOD              format
+             1976  LOAD_NAME                e
+             1978  CALL_METHOD_1         1  ''
+             1980  CALL_FUNCTION_1       1  ''
+             1982  POP_TOP
+
+ L. 894      1984  LOAD_NAME                input
+             1986  CALL_FUNCTION_0       0  ''
+             1988  POP_TOP
+
+ L. 895      1990  LOAD_NAME                exit
+             1992  CALL_FUNCTION_0       0  ''
+             1994  POP_TOP
+             1996  POP_BLOCK
+             1998  BEGIN_FINALLY
+           2000_0  COME_FROM_FINALLY  1968  '1968'
+             2000  LOAD_CONST               None
+             2002  STORE_NAME               e
+             2004  DELETE_NAME              e
+             2006  END_FINALLY
+             2008  POP_EXCEPT
+             2010  JUMP_FORWARD       2040  'to 2040'
+           2012_0  COME_FROM          1958  '1958'
+
+ L. 896      2012  DUP_TOP
+             2014  LOAD_NAME                KeyboardInterrupt
+             2016  COMPARE_OP               exception-match
+         2018_2020  POP_JUMP_IF_FALSE  2038  'to 2038'
+             2022  POP_TOP
+             2024  POP_TOP
+             2026  POP_TOP
+
+ L. 897      2028  LOAD_NAME                kill_process
+             2030  CALL_FUNCTION_0       0  ''
+             2032  POP_TOP
+             2034  POP_EXCEPT
+             2036  JUMP_FORWARD       2040  'to 2040'
+           2038_0  COME_FROM          2018  '2018'
+             2038  END_FINALLY
+           2040_0  COME_FROM          2036  '2036'
+           2040_1  COME_FROM          2010  '2010'
+           2040_2  COME_FROM          1950  '1950'
+           2040_3  COME_FROM          1908  '1908'
+           2040_4  COME_FROM          1866  '1866'
+
+
